@@ -1,21 +1,21 @@
 const merchItems = [
     {
         type: 'album',
-        title: 'Album: Xcalibur',
+        title: 'Xcalibur',
         price: 5000,
         imgUrl: 'https://images.unsplash.com/photo-1526478806334-5fd488fcaabc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=790&q=80',
         buttonId: 'a'
     },
     {
         type: 'album',
-        title: 'Album: Feast of the Three Amigos',
+        title: 'Feast of the Three Amigos',
         price: 5000,
         imgUrl: 'https://images.unsplash.com/photo-1526478806334-5fd488fcaabc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=790&q=80',
         buttonId: 'b'
     },
     {
         type: 'album',
-        title: 'Album: Don\'t Start Nothin\' Wont\'t Be Nothin\'',
+        title: 'Don\'t Start Nothin\' Won\'t Be Nothin\'',
         price: 5000,
         imgUrl: 'https://images.unsplash.com/photo-1526478806334-5fd488fcaabc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=790&q=80',
         buttonId: 'c'
@@ -46,21 +46,21 @@ const merchItems = [
         title: 'Zoe Hat',
         price: 5000,
         imgUrl: 'https://images.unsplash.com/photo-1526478806334-5fd488fcaabc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=790&q=80',
-        buttonId: 'g'
+        buttonId: '3'
     },
     {
         type: 'hat',
         title: 'Mary Hat',
         price: 5000,
         imgUrl: 'https://images.unsplash.com/photo-1526478806334-5fd488fcaabc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=790&q=80',
-        buttonId: 'h'
+        buttonId: '2'
     },
     {
         type: 'hat',
         title: 'Luke Hat',
         price: 5000,
         imgUrl: 'https://images.unsplash.com/photo-1526478806334-5fd488fcaabc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=790&q=80',
-        buttonId: 'o'
+        id: '1'
     }
 ];
 
@@ -73,22 +73,41 @@ const printToDom = (divId, textToPrint) => {
 const merchPrinter = () => {
     let domString = '';
     for (let i = 0; i < merchItems.length; i++) {
-        domString += '<div class="inividualCards" class="card" style="width: 30rem;">';
-        domString +=    `<img src="${merchItems[i].imgUrl} "class="card-img-top" alt="...">`
+        domString += '<div class="col-md-6 col-lg-4"'
+        domString += '<div class="individualCards" class="card" style="width: 30rem;">';
+        domString +=    `<img src="${merchItems[i].imgUrl}" class="card-img-top rounded" alt="...">`
         domString +=    '<div class="card-body">'
         domString +=       `<h5 class="card-title d-flex justify-content-center">${merchItems[i].title}</h5>'`
         domString +=       `<p class="card-price d-flex justify-content-center">$   ${merchItems[i].price}</p>`
-        domString +=       `<button class="btn btn-primary justify-content-center" id="${merchItems[i].buttonId}">Purchase</button>`;
-        document.getElementById(merchItems[i].buttonId).addEventListener('click', purchaseButton);
+        if (merchItems[i].type === 'tShirt' || merchItems[i].type === 'hat') {
+            console.log('meaty')
+            domString += '<div class="dropdown">'
+            domString += '<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Size</button>'
+            domString += '<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">'
+            domString +=    '<a class="dropdown-item" href="#">Small</a>'
+            domString +=    '<a class="dropdown-item" href="#">Medium</a>'
+            domString +=    '<a class="dropdown-item" href="#">Largy</a>'
+            domString += '</div>'
+            domString += '</div>'
+        };
+        domString +=       `<div class="text-center"><button class="btn btn-primary text-center purchaseButton" id="${merchItems[i].buttonId}">Purchase</button></div>`;
         domString +=    '</div>'
         domString +=    '</div>'
+        domString += '</div>'
     };
-    printToDom('merchCards', domString)
-    // document.getElementById(merchItems.buttonId).addEventListener('click', purchaseButton);
+    printToDom('merchCards', domString);
+    activatePurchaseButton();
 };
 
-const purchaseButton = () => {
-    alert('This item has been added to your cart!');
-}
+const activatePurchaseButton = () => {
+    let getButton = document.getElementsByClassName("purchaseButton");
+    for (let i = 0; i < getButton.length; i++) {
+        getButton[i].addEventListener('click', purchaseMerch)
+    };
+;}
+
+purchaseMerch = () => {
+    alert("This item has been to your cart!");
+};
 
 merchPrinter();
