@@ -73,25 +73,26 @@ const printToDom = (divId, textToPrint) => {
 const merchPrinter = () => {
     let domString = '';
     for (let i = 0; i < merchItems.length; i++) {
-        domString += '<div class="col-md-6 col-lg-4"'
-        domString += '<div class="individualCards" class="card" style="width: 30rem;">';
+        domString += '<div class="col-md-6 col-lg-4">'
+        domString += '<span class="border border-danger">'
+        domString += '<div class="individualCards" class="card mx-1" style="width: 30rem;">';
         domString +=    `<img src="${merchItems[i].imgUrl}" class="card-img-top rounded" alt="...">`
         domString +=    '<div class="card-body">'
         domString +=       `<h5 class="card-title d-flex justify-content-center">${merchItems[i].title}</h5>'`
         domString +=       `<p class="card-price d-flex justify-content-center">$   ${merchItems[i].price}</p>`
         if (merchItems[i].type === 'tShirt' || merchItems[i].type === 'hat') {
-            console.log('meaty')
-            domString += '<div class="dropdown">'
-            domString += '<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Size</button>'
+            domString += '<div class="dropdown text-center">'
+            domString += '<button class="btn btn-secondary dropdown-toggle mb-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Size</button>'
             domString += '<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">'
-            domString +=    '<a class="dropdown-item" href="#">Small</a>'
-            domString +=    '<a class="dropdown-item" href="#">Medium</a>'
-            domString +=    '<a class="dropdown-item" href="#">Largy</a>'
+            domString +=    '<a class="dropdown-item">Small</a>'
+            domString +=    '<a class="dropdown-item">Medium</a>'
+            domString +=    '<a class="dropdown-item">Largy</a>'
             domString += '</div>'
             domString += '</div>'
         };
         domString +=       `<div class="text-center"><button class="btn btn-primary text-center purchaseButton" id="${merchItems[i].buttonId}">Purchase</button></div>`;
         domString +=    '</div>'
+        domString +=   '</span>'
         domString +=    '</div>'
         domString += '</div>'
     };
@@ -102,7 +103,7 @@ const merchPrinter = () => {
 const activatePurchaseButton = () => {
     let getButton = document.getElementsByClassName("purchaseButton");
     for (let i = 0; i < getButton.length; i++) {
-        getButton[i].addEventListener('click', purchaseMerch)
+        getButton[i].addEventListener('click', purchaseMerch);
     };
 ;}
 
