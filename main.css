@@ -12,17 +12,21 @@
     max-width: 1280px; 
     line-height: 1em;  
     opacity: .7;
+    font-size: 40px;
 }
 
 .event {
     display: flex;
     flex-direction: row;
     border-style: solid;
+    font-size: 16px;
+    padding: 40px 15px 40px 160px;
+
 
 }
 
 .location .venue {
-    font-size: 16px;
+    font-size: 45px;
     font-style: normal;
     font-stretch: normal;
     letter-spacing: .3px;
