@@ -59,3 +59,16 @@ img {
     max-width: 200px;
     border-radius: 25%;
 }
+.img-center {
+    margin: 0 auto;
+}
+.spanImg{
+    min-width: 75%;
+    max-width: 100%; 
+}
+.aboutBody{
+    text-align: center;
+}
+h1{
+    color: white;
+}
