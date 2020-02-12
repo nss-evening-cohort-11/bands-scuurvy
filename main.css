@@ -1,3 +1,4 @@
+
 .block-title {
     display: block; 
     position: relative; 
@@ -27,3 +28,11 @@
     letter-spacing: .3px;
 }
 
+body {
+    background-color: aliceblue;
+};
+
+img {
+    max-width: 200px;
+    border-radius: 25%;
+}
