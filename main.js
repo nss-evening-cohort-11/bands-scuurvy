@@ -88,8 +88,10 @@ const buildTourCards = () => {
     for(let i = 0; i < tours.length; i++) {
       domString += '<div class="event">';
       domString +=   `<span class="date">${tours[i].date}</span>`;
+      domString += `<div class="details">`;
       domString +=   `<div class="venue">${tours[i].venue}</div>`;
       domString +=   `<div class="location">${tours[i].location}</div>`;
+      domString += `</div>`;
       domString += '</div>';
     };
     console.log(domString)

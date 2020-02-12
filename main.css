@@ -13,14 +13,21 @@
     line-height: 1em;  
     opacity: .7;
     font-size: 40px;
+    color: white;
 }
 
 .event {
     display: flex;
     flex-direction: row;
     border-style: solid;
-    font-size: 16px;
-    padding: 40px 15px 40px 160px;
+    font-size: 20px;
+    padding: 40px 15px 30px 160px;
+    color: white;
+    border-bottom: 1px solid red;
+    border-top: .5px solid red;
+    border-left: none;
+    border-right: none;
+    width: 70%;
 
 
 }
@@ -30,8 +37,23 @@
     font-style: normal;
     font-stretch: normal;
     letter-spacing: .3px;
+  
+}
+.location {
+    text-transform: uppercase;
+}
+.venue {
+    color: #6d6d6d;
 }
 
+.details {
+    display: block;
+    padding: 0px 10px 10px 60px;
+}
+.date {
+    padding: -11px;
+    text-transform: uppercase;
+}
 body {
 
     background-color: rgb(51, 50, 50);
