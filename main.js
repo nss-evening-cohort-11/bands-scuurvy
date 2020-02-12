@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 const tours = [ 
 
     {date: 'Sun, Feb, 23rd', venue:'For Solo', location: 'Mexico Mexico'},
@@ -9,6 +11,7 @@ const tours = [
     {date: 'Wed, Jun, 24th', venue:'Fenway Park', location: 'Boston, MA'},
     
 ];
+>>>>>>> 030a1d05757fe2394b66d1cf553f520c7eb32022
 
 const merchItems = [
     {
