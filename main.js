@@ -141,3 +141,4 @@ purchaseMerch = () => {
 };
 
 merchPrinter();
+
