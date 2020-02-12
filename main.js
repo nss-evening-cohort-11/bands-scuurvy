@@ -80,20 +80,21 @@ const printToDom = (divId, textToPrint) => {
     const selectedDiv = document.getElementById(divId);
     selectedDiv.innerHTML = textToPrint;
   };
-const buildTourCards = () => {
-    let domString = '';
-    for(let i = 0; i < tours.length; i++) {
-      domString += '<div class="event">';
-      domString +=   `<span class="date">${tours[i].date}</span>`;
-      domString += `<div class="details">`;
-      domString +=   `<div class="venue">${tours[i].venue}</div>`;
-      domString +=   `<div class="location">${tours[i].location}</div>`;
-      domString += `</div>`;
-      domString += '</div>';
-    };
-    printToDom('tour-dates', domString);
-  };
-  buildTourCards();
+
+// const buildTourCards = () => {
+//     let domString = '';
+//     for(let i = 0; i < tours.length; i++) {
+//       domString += '<div class="event">';
+//       domString +=   `<span class="date">${tours[i].date}</span>`;
+//       domString += `<div class="details">`;
+//       domString +=   `<div class="venue">${tours[i].venue}</div>`;
+//       domString +=   `<div class="location">${tours[i].location}</div>`;
+//       domString += `</div>`;
+//       domString += '</div>';
+//     };
+//     printToDom('tour-dates', domString);
+//   };
+//   buildTourCards();
 
 const merchPrinter = () => {
     let domString = '';
@@ -132,19 +133,12 @@ const activatePurchaseButton = () => {
     };
 };
 
-purchaseMerch = () => {
+const purchaseMerch = () => {
     alert("This item has been to your cart!");
 };
 
-merchPrinter();
-
-document.getElementById('album').addEventListener('click', merchSorter);
-document.getElementById('tShirt').addEventListener('click', merchSorter);
-document.getElementById('hat').addEventListener('click', merchSorter);
-document.getElementById('all').addEventListener('click', merchSorter);
-
 const merchSorter = (e) => {
-    const buttonId = e.target.id;
+    let buttonId = e.target.id;
     if (buttonId === 'all'){
         merchPrinter(merchItems);
     } else { 
@@ -152,8 +146,23 @@ const merchSorter = (e) => {
         for (let i = 0; i < merchItems.length; i++) {
             if (merchItems[i].type === buttonId) {
                 sortedMerchItems.push(merchItems[i]);
+                console.log(sortedMerchItems[i]);
             };
         };
         merchPrinter(sortedMerchItems);
     };
 };
+
+const event = () => {
+    document.getElementById('album').addEventListener('click', merchSorter);
+    document.getElementById('tShirt').addEventListener('click', merchSorter);
+    document.getElementById('hat').addEventListener('click', merchSorter);
+    document.getElementById('all').addEventListener('click', merchSorter);
+};
+
+const init = () => {
+    event();
+    merchPrinter(merchItems);
+};
+
+init();
