@@ -6,11 +6,22 @@ img {
     max-width: 200px;
     border-radius: 25%;
 }
-.image-bg-fixed-height {
-    background: url('./bandpic.png') no-repeat center center scroll;
-    height: 450px;
-}
 
 .img-center {
     margin: 0 auto;
+}
+
+.spanImg{
+    min-width: 75%;
+    max-width: 100%; 
+}
+
+.aboutBody{
+   margin: 100px; 
+    color: red;
+    text-align: center;
+}
+
+.aboutP{
+    color: gray;
 }
