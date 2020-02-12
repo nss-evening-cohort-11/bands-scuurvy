@@ -1,0 +1,29 @@
+.block-title {
+    display: block; 
+    position: relative; 
+    font-weight: 400; 
+    padding: .5625rem 0; 
+    margin: 1.125rem auto; 
+    clear: both; 
+    text-align: left; 
+    text-transform: uppercase; 
+    width: 100%; 
+    max-width: 1280px; 
+    line-height: 1em;  
+    opacity: .7;
+}
+
+.event {
+    display: flex;
+    flex-direction: row;
+    border-style: solid;
+
+}
+
+.location .venue {
+    font-size: 16px;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: .3px;
+}
+
