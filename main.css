@@ -28,17 +28,15 @@
     border-left: none;
     border-right: none;
     width: 70%;
-
-
 }
 
 .location .venue {
     font-size: 45px;
     font-style: normal;
     font-stretch: normal;
-    letter-spacing: .3px;
-  
+    letter-spacing: .3px; 
 }
+
 .location {
     text-transform: uppercase;
 }
@@ -55,7 +53,6 @@
     text-transform: uppercase;
 }
 body {
-
     background-color: rgb(51, 50, 50);
 }
 img {

@@ -79,10 +79,7 @@ const merchItems = [
 const printToDom = (divId, textToPrint) => {
     const selectedDiv = document.getElementById(divId);
     selectedDiv.innerHTML = textToPrint;
-
   };
-
-
 const buildTourCards = () => {
     let domString = '';
     for(let i = 0; i < tours.length; i++) {
@@ -94,12 +91,9 @@ const buildTourCards = () => {
       domString += `</div>`;
       domString += '</div>';
     };
-    console.log(domString)
     printToDom('tour-dates', domString);
   };
   buildTourCards();
-
-
 
 const merchPrinter = () => {
     let domString = '';
@@ -136,7 +130,7 @@ const activatePurchaseButton = () => {
     for (let i = 0; i < getButton.length; i++) {
         getButton[i].addEventListener('click', purchaseMerch);
     };
-;}
+};
 
 purchaseMerch = () => {
     alert("This item has been to your cart!");
