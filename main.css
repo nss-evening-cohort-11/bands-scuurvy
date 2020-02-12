@@ -1,0 +1,10 @@
+body {
+    background-color: aliceblue;
+};
+
+img {
+    max-width: 200px;
+    border-radius: 25%;
+}
+
+
