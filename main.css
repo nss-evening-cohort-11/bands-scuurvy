@@ -1,3 +1,8 @@
 body {
+<<<<<<< HEAD
     background-color: rgb(51, 50, 50);
+}
+img {
+    max-width: 200px;
+    border-radius: 25%;
 }
