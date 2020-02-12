@@ -75,7 +75,7 @@ const merchPrinter = () => {
     for (let i = 0; i < merchItems.length; i++) {
         domString += '<div class="col-md-6 col-lg-4">'
         domString += '<span class="border border-danger">'
-        domString += '<div class="individualCards" class="card mx-1" style="width: 30rem;">';
+        domString += '<div class="individualCards" class="card rounded mx-auto d-block" style="width: 30rem;">';
         domString +=    `<img src="${merchItems[i].imgUrl}" class="card-img-top rounded" alt="...">`
         domString +=    '<div class="card-body">'
         domString +=       `<h5 class="card-title d-flex justify-content-center">${merchItems[i].title}</h5>'`
@@ -113,3 +113,22 @@ purchaseMerch = () => {
 
 merchPrinter();
 
+document.getElementById('album').addEventListener('click', merchSorter);
+document.getElementById('tShirt').addEventListener('click', merchSorter);
+document.getElementById('hat').addEventListener('click', merchSorter);
+document.getElementById('all').addEventListener('click', merchSorter);
+
+const merchSorter = (e) => {
+    const buttonId = e.target.id;
+    if (buttonId === 'all'){
+        merchPrinter(merchItems);
+    } else { 
+        const sortedMerchItems = [];
+        for (let i = 0; i < merchItems.length; i++) {
+            if (merchItems[i].type === buttonId) {
+                sortedMerchItems.push(merchItems[i]);
+            };
+        };
+        merchPrinter(sortedMerchItems);
+    };
+};
