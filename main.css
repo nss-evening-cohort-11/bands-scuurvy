@@ -1,3 +1,9 @@
+.merchImages {
+    max-width: 300px;
+    border-radius: 10%;
+    text-align: center;
+    margin: auto;
+}
 
 .block-title {
     display: block; 
@@ -52,13 +58,15 @@
     padding: -11px;
     text-transform: uppercase;
 }
-body {
-    background-color: rgb(51, 50, 50);
-}
+
 img {
     max-width: 200px;
     border-radius: 25%;
 }
+
+
+h1 {
+
 .img-center {
     margin: 0 auto;
 }
@@ -70,5 +78,6 @@ img {
     text-align: center;
 }
 h1{
+
     color: white;
 }
