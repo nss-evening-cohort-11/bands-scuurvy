@@ -82,10 +82,25 @@ h1 {
     border: 3px solid black;
     margin: 0px 70px 0px 70px;   
 }
-.aboutHeading{
+.aboutHeading {
     color: white;
 }
-.aboutP{
-    font-size: 27px;
+.aboutP {
+    font-size: 20px;
     margin: 30px;
+}
+
+.bandMember {
+    border-radius: 0%;
+    min-width: 100%;   
+}
+
+.bandAbout {
+    min-width: 50%;
+}
+.aboutCard {
+    max-width:50%;
+}
+.card-img{
+    min-width: 100%;
 }
