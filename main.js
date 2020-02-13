@@ -140,7 +140,7 @@ const printToDom = (divId, textToPrint) => {
 const albumArr = [
     {
     title: "Make Em Shower Cry",
-    imgUrl: "oldtownalbum.png",
+    imgUrl: "./takeit.png",
     buttonId: "MakeEmShowerCry",
     trackList: {
         track1: "Go Google it",
@@ -149,7 +149,7 @@ const albumArr = [
         track4: "Maybe for Pie",
         track5: "But Mary Said",
         track6: "Class is not the Place",
-        track7: "ShowerCry"
+        track7: "Shower Cry"
         }
     },
     {
@@ -184,30 +184,28 @@ const albumArr = [
 const albumBuilder = (builderArr)=> {
     let domString = "";
     for (let i = 0; i < builderArr.length; i++){
-        domString += '<div class="col-md-6 col-lg-4 text-center d-flex flex-wrap">';
-        domString += '<div>';
+        domString += '<div class="col-md-7 col-lg-4 text-center d-flex">';
+        domString +=  '<div>';
         domString +=    `<h3 class="albumTitle">${builderArr[i].title}</h3>`;
         domString +=    `<img src="${builderArr[i].imgUrl}" class="aboutImg" alt="Album cover image">`;
-        domString +=    `<div class="btn-group dropup">`
-        domString +=    `<button type="button" class="btn btn-secondary dropdown-toggle m-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Show Track List</button>`;
-        domString += `<div class="dropdown-menu">`
-        domString += `<a class="dropdown-item">${builderArr[i].trackList.track1}</a>`
-        domString += `<a class="dropdown-item">${builderArr[i].trackList.track2}</a>`
-        domString += `<a class="dropdown-item">${builderArr[i].trackList.track3}</a>`
-        domString += `<a class="dropdown-item">${builderArr[i].trackList.track4}</a>`
-        domString += `<a class="dropdown-item">${builderArr[i].trackList.track5}</a>`
-        domString += `<a class="dropdown-item">${builderArr[i].trackList.track6}</a>`
-        domString += `<a class="dropdown-item">${builderArr[i].trackList.track7}</a>`
-        domString += `</div>`;
-        domString +=    `</div>`;
-        domString +=    `</div>`;
+        domString +=     `<div class="btn-group dropup">`
+        domString +=      `<button type="button" class="btn btn-secondary dropdown-toggle m-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Show Track List</button>`;
+        domString +=       `<div class="dropdown-menu">`
+        domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track1}</a>`
+        domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track2}</a>`
+        domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track3}</a>`
+        domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track4}</a>`
+        domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track5}</a>`
+        domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track6}</a>`
+        domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track7}</a>`
+        domString +=        `</div>`;
+        domString +=      `</div>`;
+        domString +=   `</div>`;
         domString += `</div>`
     };
     printToDom('album-list', domString);
     activateButton();
 };
-
-
 const activateButton = () =>{ 
     let getButton = document.getElementsByClassName("trackButton");
 for (let i = 0; i < getButton.length; i++) {
@@ -215,7 +213,7 @@ for (let i = 0; i < getButton.length; i++) {
 }; 
 }
     albumBuilder(albumArr);
-    trackBuilder(albumArr);
+
     
 
 

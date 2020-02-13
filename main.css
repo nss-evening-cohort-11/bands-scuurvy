@@ -71,14 +71,21 @@ img {
 h1 {
     color: white;
 }
-h2 {
-    color: white;
-}
 .albumTitle {
     font-size: 25px;
     padding-bottom: 10px;    
 }
 .aboutImg {
-max-width: 100%;
-border-radius: 0%;
+    min-width:25%;
+    max-width: 50%;
+    border-radius: 0%;
+    border: 3px solid black;
+    margin: 0px 70px 0px 70px;   
+}
+.aboutHeading{
+    color: white;
+}
+.aboutP{
+    font-size: 27px;
+    margin: 30px;
 }
