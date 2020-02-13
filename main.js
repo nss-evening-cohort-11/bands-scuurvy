@@ -90,6 +90,7 @@ const printToDom = (divId, textToPrint) => {
     printToDom ('footer-text', domString);
 };
 footerBuilder();
+
 const buildTourCards = () => {
     let domString = '';
     for(let i = 0; i < tours.length; i++) {
