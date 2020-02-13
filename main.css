@@ -66,5 +66,18 @@ img {
 
 
 h1 {
+
+.img-center {
+    margin: 0 auto;
+}
+.spanImg{
+    min-width: 75%;
+    max-width: 100%; 
+}
+.aboutBody{
+    text-align: center;
+}
+h1{
+
     color: white;
 }
