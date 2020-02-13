@@ -64,9 +64,6 @@ img {
     border-radius: 25%;
 }
 
-
-h1 {
-
 .img-center {
     margin: 0 auto;
 }
@@ -78,6 +75,5 @@ h1 {
     text-align: center;
 }
 h1{
-
     color: white;
 }
