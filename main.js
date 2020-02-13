@@ -81,44 +81,43 @@ const printToDom = (divId, textToPrint) => {
     selectedDiv.innerHTML = textToPrint;
   };
 
-// const buildTourCards = () => {
-//     let domString = '';
-//     for(let i = 0; i < tours.length; i++) {
-//       domString += '<div class="event">';
-//       domString +=   `<span class="date">${tours[i].date}</span>`;
-//       domString += `<div class="details">`;
-//       domString +=   `<div class="venue">${tours[i].venue}</div>`;
-//       domString +=   `<div class="location">${tours[i].location}</div>`;
-//       domString += `</div>`;
-//       domString += '</div>';
-//     };
-//     printToDom('tour-dates', domString);
-//   };
-//   buildTourCards();
-
-const merchPrinter = () => {
+const buildTourCards = () => {
     let domString = '';
-    for (let i = 0; i < merchItems.length; i++) {
+    for(let i = 0; i < tours.length; i++) {
+      domString += '<div class="event">';
+      domString +=   `<span class="date">${tours[i].date}</span>`;
+      domString += `<div class="details">`;
+      domString +=   `<div class="venue">${tours[i].venue}</div>`;
+      domString +=   `<div class="location">${tours[i].location}</div>`;
+      domString += `</div>`;
+      domString += '</div>';
+    };
+    printToDom('tour-dates', domString);
+  };
+
+const merchPrinter = (lastArray) => {
+    let domString = '';
+    for (let i = 0; i < lastArray.length; i++) {
         domString += '<div class="col-md-6 col-lg-4">'
-        domString += '<span class="border border-danger">'
-        domString += '<div class="individualCards" class="card rounded mx-auto d-block" style="width: 30rem;">';
-        domString +=    `<img src="${merchItems[i].imgUrl}" class="card-img-top rounded" alt="...">`
+        // domString += '<span class="border border-danger">'
+        domString += '<div class="individualCards card" style="width: 20rem;">';
+        domString +=    `<img src="${lastArray[i].imgUrl}" classs="card-img-top rounded merchImages" alt="...">`
         domString +=    '<div class="card-body">'
-        domString +=       `<h5 class="card-title d-flex justify-content-center">${merchItems[i].title}</h5>'`
-        domString +=       `<p class="card-price d-flex justify-content-center">$   ${merchItems[i].price}</p>`
-        if (merchItems[i].type === 'tShirt' || merchItems[i].type === 'hat') {
+        domString +=       `<h5 class="card-title d-flex justify-content-center">${lastArray[i].title}</h5>'`
+        domString +=       `<p class="card-price d-flex justify-content-center">$   ${lastArray[i].price}</p>`
+        if (lastArray[i].type === 'tShirt' || lastArray[i].type === 'hat') {
             domString += '<div class="dropdown text-center">'
-            domString += '<button class="btn btn-secondary dropdown-toggle mb-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Size</button>'
+            domString += '<button class="btn btn-outline-danger dropdown-toggle mb-1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Size</button>'
             domString += '<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">'
             domString +=    '<a class="dropdown-item">Small</a>'
             domString +=    '<a class="dropdown-item">Medium</a>'
-            domString +=    '<a class="dropdown-item">Largy</a>'
+            domString +=    '<a class="dropdown-item">Large</a>'
             domString += '</div>'
             domString += '</div>'
         };
-        domString +=       `<div class="text-center"><button class="btn btn-primary text-center purchaseButton" id="${merchItems[i].buttonId}">Purchase</button></div>`;
+        domString +=       `<div class="text-center"><button class="btn btn-outline-danger text-center purchaseButton" id="${merchItems[i].buttonId}">Purchase</button></div>`;
         domString +=    '</div>'
-        domString +=   '</span>'
+        // domString +=   '</span>'
         domString +=    '</div>'
         domString += '</div>'
     };
@@ -138,20 +137,22 @@ const purchaseMerch = () => {
 };
 
 const merchSorter = (e) => {
-    let buttonId = e.target.id;
-    if (buttonId === 'all'){
+    const sortedMerch = [];
+    const buttonId = e.target.id;
+    if(buttonId === 'all') {
         merchPrinter(merchItems);
-    } else { 
-        const sortedMerchItems = [];
+    } else {
         for (let i = 0; i < merchItems.length; i++) {
             if (merchItems[i].type === buttonId) {
-                sortedMerchItems.push(merchItems[i]);
-                console.log(sortedMerchItems[i]);
-            };
+                sortedMerch.push(merchItems[i]);
+            
+            }; 
         };
-        merchPrinter(sortedMerchItems);
+        merchPrinter(sortedMerch);
     };
 };
+
+
 
 const event = () => {
     document.getElementById('album').addEventListener('click', merchSorter);
@@ -161,8 +162,14 @@ const event = () => {
 };
 
 const init = () => {
+    // if (window.location.pathname === '.merchandise.html'){
+    merchPrinter(merchItems)    
     event();
-    merchPrinter(merchItems);
+;
+    // };
+    // if (window.location.pathname === '/.tour.html') {
+    //     buildTourCards();
+    // };
 };
 
 init();
