@@ -172,7 +172,6 @@ const init = () => {
     // if (window.location.pathname === '.merchandise.html'){
     merchPrinter(merchItems)    
     event();
-;
     // };
     // if (window.location.pathname === '/.tour.html') {
     //     buildTourCards();
