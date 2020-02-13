@@ -62,13 +62,23 @@ img {
 .img-center {
     margin: 0 auto;
 }
-.spanImg{
-    min-width: 75%;
-    max-width: 100%; 
+.spanImg {
+    min-width: 65%;
+    max-width: 65%;
+    border-radius: 0%;
+
 }
-.aboutBody{
-    text-align: center;
-}
-h1{
+h1 {
     color: white;
+}
+h2 {
+    color: white;
+}
+.albumTitle {
+    font-size: 25px;
+    padding-bottom: 10px;    
+}
+.aboutImg {
+max-width: 100%;
+border-radius: 0%;
 }
