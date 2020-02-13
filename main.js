@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-=======
+
+
 const tours = [ 
 
     {date: 'Sun, Feb, 23rd', venue:'For Solo', location: 'Mexico Mexico'},
@@ -11,7 +11,6 @@ const tours = [
     {date: 'Wed, Jun, 24th', venue:'Fenway Park', location: 'Boston, MA'},
     
 ];
->>>>>>> 030a1d05757fe2394b66d1cf553f520c7eb32022
 
 const merchItems = [
     {
@@ -83,6 +82,14 @@ const printToDom = (divId, textToPrint) => {
     const selectedDiv = document.getElementById(divId);
     selectedDiv.innerHTML = textToPrint;
   };
+
+  const footerBuilder = () => {
+    let domString = '';
+    const date = newDate().getFullYear();
+    domString += `<p> class="col-xs-1 text-center">&copy Scuurvy ${date} </p>`;
+    printToDom ('footer-text', domString);
+};
+footerBuilder();
 const buildTourCards = () => {
     let domString = '';
     for(let i = 0; i < tours.length; i++) {
@@ -134,6 +141,17 @@ const activatePurchaseButton = () => {
         getButton[i].addEventListener('click', purchaseMerch);
     };
 };
+
+const footerBuilder = () => {
+    let domString = '';
+    const date = new Date().getFullYear();
+    domString += `<p> class="col-xs-1 text-center">&copy Scuurvy ${date} </p>`;
+
+    printToDom (footer-text, domString);
+}
+footerBuilder();
+
+
 
 purchaseMerch = () => {
     alert("This item has been to your cart!");
