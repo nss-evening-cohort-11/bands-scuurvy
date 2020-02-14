@@ -1,4 +1,10 @@
-
+.merchImages {
+    max-width: 300px;
+    border-radius: 10%;
+    text-align: center;
+    margin: auto;
+    min-height: 400px;
+}
 .block-title {
     display: block; 
     position: relative; 
@@ -15,7 +21,22 @@
     font-size: 40px;
     color: white;
 }
-
+.form-title {
+    display: block; 
+    position: relative; 
+    font-weight: 400; 
+    padding: .5625rem 0; 
+    margin: 1.125rem auto; 
+    clear: both; 
+    text-align: left; 
+    text-transform: uppercase; 
+    width: 100%; 
+    max-width: 1280px; 
+    line-height: 1em;  
+    opacity: .7;
+    font-size: 30px;
+    color: #ccc;
+}
 .event {
     display: flex;
     flex-direction: row;
@@ -29,7 +50,6 @@
     border-right: none;
     width: 70%;
 }
-
 .location .venue {
     font-size: 45px;
     font-style: normal;
@@ -52,23 +72,91 @@
     padding: -11px;
     text-transform: uppercase;
 }
-body {
-    background-color: rgb(51, 50, 50);
-}
-img {
+
+.logoPhoto {
     max-width: 200px;
     border-radius: 25%;
 }
+
+.form-check-label {
+    color: white;
+}
+
 .img-center {
     margin: 0 auto;
 }
-.spanImg{
-    min-width: 75%;
-    max-width: 100%; 
+.spanImg {
+    min-width: 65%;
+    max-width: 100%;
+    border-radius: 0%;
 }
-.aboutBody{
-    text-align: center;
-}
-h1{
+h1 {
     color: white;
+}
+.albumTitle {
+    font-size: 25px;
+    padding-bottom: 10px;    
+}
+.aboutImg {
+    min-width:25%;
+    max-width: 70%;
+    border-radius: 0%;
+    border: 3px solid black;
+    margin: 0px 70px 0px 70px;   
+}
+.aboutHeading {
+    color: white;
+}
+.aboutP {
+    font-size: 20px;
+    margin: 30px;
+}
+
+.bandMember {
+    border-radius: 0%;
+    min-width: 100%;   
+}
+.bandAbout {
+    min-width: 50%;
+}
+.aboutCard {
+    max-width:45%;
+    min-width: 500px;
+    background-color: transparent;
+    border-radius: 0%;
+    text-shadow: 2px 2px 5px white, 0 0 1em white, 0 0 0.8em black;
+    font-weight: 600;
+}
+.card-img {
+    min-width: 100%;
+    border-radius: 0%;
+}
+.individualCards {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+    min-height: 400px;
+    background-color:#6d6d6d;
+    color: white;
+}
+body{
+    background-color: #6d6d6d;
+}
+.cardRight{
+    margin-left: 50%;
+    overflow: hidden;
+}
+.cardLeft{
+    margin-right: 50%;
+}
+.zoom {
+    transition: transform .2s;
+    margin: 0 auto;
+} 
+.zoom:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
 }
