@@ -143,14 +143,19 @@ const merchSorter = (e) => {
         for (let i = 0; i < merchItems.length; i++) {
             if (merchItems[i].type === buttonId) {
                 sortedMerch.push(merchItems[i]);
-            
             }; 
         };
         merchPrinter(sortedMerch);
     };
 };
 
-
+// const footerBuilder = () => {
+//     let domString = '';
+//     const date = newDate().getFullYear();
+//     domString += `<p class="col-xs-1 text-center"> &copy Scuurvy ${date} </p>`;
+//     printToDom ('footer-text', domString);
+// }
+// footerBuilder();
 
 const event = () => {
     document.getElementById('album').addEventListener('click', merchSorter);
@@ -160,10 +165,15 @@ const event = () => {
 };
 
 const init = () => {
+
     // if (window.location.pathname == 'bands-scuurvy/merchandise.html'){
     merchPrinter(merchItems)    
     event();
     
+    // if (window.location.pathname === '.merchandise.html'){
+    merchPrinter(merchItems); 
+    event();
+
     // };
     // if (window.location.pathname === '/.tour.html') {
     //     buildTourCards();
