@@ -59,7 +59,7 @@
     text-transform: uppercase;
 }
 
-img {
+.logoPhoto {
     max-width: 200px;
     border-radius: 25%;
 }
@@ -74,6 +74,7 @@ img {
 .aboutBody{
     text-align: center;
 }
-h1{
-    color: white;
+
+#carouselPhotos {
+    width: max-content;
 }
