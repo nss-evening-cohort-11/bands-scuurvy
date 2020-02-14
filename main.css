@@ -3,6 +3,8 @@
     border-radius: 10%;
     text-align: center;
     margin: auto;
+    min-height: 400px;
+
 }
 
 .block-title {
@@ -77,3 +79,16 @@ img {
 h1{
     color: white;
 }
+
+.individualCards {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+    min-height: 400px;
+    background-color:#6d6d6d;
+    color: white;
+}
+
+
