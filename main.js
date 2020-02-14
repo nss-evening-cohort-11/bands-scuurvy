@@ -8,31 +8,13 @@ const tours = [
     {date: 'Wed, Jun, 24th', venue:'Fenway Park', location: 'Boston, MA'},   
 ];
 
-const buildTourCards = () => {
-    let domString = '';
-    for(let i = 0; i < tours.length; i++) {
-      domString += '<div class="event">';
-      domString +=   `<span class="date">${tours[i].date}</span>`;
-      domString += `<div class="details">`;
-      domString +=   `<div class="venue">${tours[i].venue}</div>`;
-      domString +=   `<div class="location">${tours[i].location}</div>`;
-      domString += `</div>`;
-      domString += '</div>';
-    };
-    printToDom('tour-dates', domString);
-  };
-buildTourCards();
-
 const activatePurchaseButton = () => {
     let getButton = document.getElementsByClassName("purchaseButton");
     for (let i = 0; i < getButton.length; i++) {
         getButton[i].addEventListener('click', purchaseMerch);
     };
 };
-const purchaseMerch = () => {
-    alert("This item has been to your cart!");
-};
-merchPrinter();
+
 const albumArr = [
     {
     title: "Make Em Shower Cry",
@@ -101,11 +83,11 @@ const albumBuilder = (builderArr)=> {
     };
     printToDom('album-list', domString);
 }
-
 const printToDom = (divId, textToPrint) => {
     const selectedDiv = document.getElementById(divId);
     selectedDiv.innerHTML = textToPrint;
   };
+
 const merchItems = [
     {
         type: 'album',
@@ -171,7 +153,19 @@ const merchItems = [
         id: '1'
     }
 ];
-
+const buildTourCards = (tourArray) => {
+    let domString = '';
+    for(let i = 0; i < tourArray.length; i++) {
+      domString += '<div class="event">';
+      domString +=   `<span class="date">${tourArray[i].date}</span>`;
+      domString += `<div class="details">`;
+      domString +=   `<div class="venue">${tourArray[i].venue}</div>`;
+      domString +=   `<div class="location">${tourArray[i].location}</div>`;
+      domString += `</div>`;
+      domString += '</div>';
+    };
+    printToDom('tour-dates', domString);
+  };
 const merchPrinter = (lastArray) => {
     let domString = '';
     for (let i = 0; i < lastArray.length; i++) {
@@ -204,11 +198,24 @@ const activateButton = () =>{
 for (let i = 0; i < getButton.length; i++) {
     getButton[i].addEventListener('click', trackBuilder);
 }; 
-}
-albumBuilder(albumArr);
-
+};
     const purchaseMerch = () => {
     alert("This item has been to your cart!");
+};
+
+const el = document.getElementById("subscribeButton");
+const submitForm = () => {
+    alert ("Thank you for subscribing!");
+};
+
+const tourInit = () => {
+    buildTourCards(tours);
+    tourEvent();
+};
+
+const tourEvent = () => {
+    el.addEventListener('click', submitForm);
+
 };
 const merchSorter = (e) => {
     const sortedMerch = [];
@@ -225,20 +232,17 @@ const merchSorter = (e) => {
     };
 };
 
-const footerBuilder = () => {
-    let domString = '';
-    const date = newDate().getFullYear();
-    domString += `<p class="col-xs-1 text-center"> &copy Scuurvy ${date} </p>`;
-    printToDom ('footer-text', domString);
-}
-footerBuilder();
-const event = () => {
+const merchEvent = () => {
     document.getElementById('album').addEventListener('click', merchSorter);
     document.getElementById('tShirt').addEventListener('click', merchSorter);
     document.getElementById('hat').addEventListener('click', merchSorter);
     document.getElementById('all').addEventListener('click', merchSorter);
 };
 
-aboutInit = () =>{
+const aboutInit = () =>{
     albumBuilder(albumArr);
-}
+};
+const merchInit = () => {
+    merchPrinter(merchItems);    
+    merchEvent();
+};
