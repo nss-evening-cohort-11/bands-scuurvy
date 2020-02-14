@@ -1,3 +1,11 @@
+.merchImages {
+    max-width: 300px;
+    border-radius: 10%;
+    text-align: center;
+    margin: auto;
+    min-height: 400px;
+
+}
 
 .block-title {
     display: block; 
@@ -52,13 +60,12 @@
     padding: -11px;
     text-transform: uppercase;
 }
-body {
-    background-color: rgb(51, 50, 50);
-}
+
 img {
     max-width: 200px;
     border-radius: 25%;
 }
+
 .img-center {
     margin: 0 auto;
 }
@@ -85,6 +92,7 @@ h1 {
 .aboutHeading {
     color: white;
 }
+<<<<<<< HEAD
 .aboutP {
     font-size: 20px;
     margin: 30px;
@@ -104,3 +112,18 @@ h1 {
 .card-img{
     min-width: 100%;
 }
+=======
+
+.individualCards {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+    min-height: 400px;
+    background-color:#6d6d6d;
+    color: white;
+}
+
+
+>>>>>>> 072778de7c596262b40cefb16a8195eff3a45a3a
