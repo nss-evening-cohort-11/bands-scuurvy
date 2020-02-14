@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const homeVideos = [
     {videoUrl:"https://youtube.com/embed/yRZ-UF4do-A", id: "vid1"},
     {videoUrl:"https://youtube.com/embed/dZTwj26wuFY", id: "vid2"},
@@ -5,13 +6,21 @@ const homeVideos = [
     {videoUrl:"https://youtube.com/embed/kxfEPoDoR3A", id: "vid4"}
 ]
 const tours = [ 
+=======
+
+const tourArray = [ 
+>>>>>>> master
     {date: 'Sun, Feb, 23rd', venue:'For Solo', location: 'Mexico Mexico'},
     {date: 'Sun, Feb, 24th', venue:'For Solo', location:  'Mexico Mexico'},
     {date: 'Thu, Feb, 27th', venue:'Festival Del Mar', location: 'Vina Del Chile'},
     {date: 'Fri, Feb, 28th', venue:'Pepsi Center', location: 'Denver, CO'},
     {date: 'Sun, May, 31st', venue:'Chin Pavilion', location:  'Phoenix, AZ'},
     {date: 'Wed, Jun, 3rd', venue:'Wrigley Field', location: 'Chicago, IL'},
+<<<<<<< HEAD
     {date: 'Wed, Jun, 24th', venue:'Fenway Park', location: 'Boston, MA'},
+=======
+    {date: 'Wed, Jun, 24th', venue:'Fenway Park', location: 'Boston, MA'},   
+>>>>>>> master
 ];
 
 const merchItems = [
@@ -86,12 +95,12 @@ const printToDom = (divId, textToPrint) => {
 
 const buildTourCards = () => {
     let domString = '';
-    for(let i = 0; i < tours.length; i++) {
+    for(let i = 0; i < tourArray.length; i++) {
       domString += '<div class="event">';
-      domString +=   `<span class="date">${tours[i].date}</span>`;
+      domString +=   `<span class="date">${tourArray[i].date}</span>`;
       domString += `<div class="details">`;
-      domString +=   `<div class="venue">${tours[i].venue}</div>`;
-      domString +=   `<div class="location">${tours[i].location}</div>`;
+      domString +=   `<div class="venue">${tourArray[i].venue}</div>`;
+      domString +=   `<div class="location">${tourArray[i].location}</div>`;
       domString += `</div>`;
       domString += '</div>';
     };
@@ -136,6 +145,23 @@ const activatePurchaseButton = () => {
 const purchaseMerch = () => {
     alert("This item has been to your cart!");
 };
+// merchPrinter();
+
+
+const el = document.getElementById("subscribeButton");
+const submitForm = () => {
+    alert ("Thank you for subscribing!");
+};
+
+const tourInit = () => {
+    buildTourCards(tourArray)
+    tourEvent();
+};
+
+const tourEvent = () => {
+    el.addEventListener('click', submitForm);
+
+}
 
 const merchSorter = (e) => {
     const sortedMerch = [];
@@ -170,27 +196,15 @@ const videoBuilder = () => {
 // const homeEvent = () => {
 //     document.getElementById('nextVideo').addEventListener('click',)
 // }
-const event = () => {
+
+const merchEvent = () => {
     document.getElementById('album').addEventListener('click', merchSorter);
     document.getElementById('tShirt').addEventListener('click', merchSorter);
     document.getElementById('hat').addEventListener('click', merchSorter);
     document.getElementById('all').addEventListener('click', merchSorter);
 };
 
-const init = () => {
-
-    // if (window.location.pathname == 'bands-scuurvy/merchandise.html'){
+const merchInit = () => {
     merchPrinter(merchItems)    
-    event();
-    
-    // if (window.location.pathname === '.merchandise.html'){
-    merchPrinter(merchItems); 
-    event();
-
-    // };
-    // if (window.location.pathname === '/.tour.html') {
-    //     buildTourCards();
-    // };
+    merchEvent();
 };
-
-init();
