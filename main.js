@@ -132,16 +132,6 @@ const activatePurchaseButton = () => {
     };
 };
 
-const footerBuilder = () => {
-    let domString = '';
-    const date = newDate().getFullYear();
-    domString += `<p> class="col-xs-1 text-center">&copy Scuurvy ${date} </p>`;
-    printToDom (footer-text, domString);
-}
-footerBuilder();
-
-purchaseMerch = () => {
-
 const purchaseMerch = () => {
     alert("This item has been to your cart!");
 };
@@ -161,6 +151,14 @@ const merchSorter = (e) => {
     };
 };
 
+// const footerBuilder = () => {
+//     let domString = '';
+//     const date = newDate().getFullYear();
+//     domString += `<p class="col-xs-1 text-center"> &copy Scuurvy ${date} </p>`;
+//     printToDom ('footer-text', domString);
+// }
+// footerBuilder();
+
 const event = () => {
     document.getElementById('album').addEventListener('click', merchSorter);
     document.getElementById('tShirt').addEventListener('click', merchSorter);
@@ -170,7 +168,7 @@ const event = () => {
 
 const init = () => {
     // if (window.location.pathname === '.merchandise.html'){
-    merchPrinter(merchItems)    
+    merchPrinter(merchItems); 
     event();
     // };
     // if (window.location.pathname === '/.tour.html') {
