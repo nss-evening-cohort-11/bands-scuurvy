@@ -161,14 +161,16 @@ const tourImageArray = [
     {imgUrl: "https://i.imgur.com/xcOBNBW.png"},
     {imgUrl: "https://i.imgur.com/pnnPLox.png"},
     {imgUrl: "https://i.imgur.com/fSlbZ4H.png"},
+    {imgUrl: "https://i.imgur.com/dQFoCkr.png"},
+    {imgUrl: "https://i.imgur.com/VRfGkU6.png"},
+    {imgUrl: "https://i.imgur.com/kcBxuBB.png"},
 ];
 
 const buildTourPhoto = () => {
     let domString = '';
-    for(let i = 0; i < tourImageArray.length; i++) {
-    domString+= `<div class="card" style="width: 18rem;">`
-    domString+= `<img class="card-img-top" src="${tourImageArray[i].imgUrl}" alt="Card image cap">`
-    domString+= `<div class="card-body">`
+    for(let i = 0; i < tourImageArray.length; i++) {   
+    domString+=`<div class="tour-card" style="width: 18rem;">`
+    domString+= `<img class="tour-picture" src="${tourImageArray[i].imgUrl}" alt="Card image cap">`
     domString+= `</div>`
     };
       printToDom('tour-photos', domString);
