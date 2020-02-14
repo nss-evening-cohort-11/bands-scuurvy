@@ -1,5 +1,10 @@
+const homeVideos = [
+    {videoUrl:"https://youtube.com/embed/yRZ-UF4do-A", id: "vid1"},
+    {videoUrl:"https://youtube.com/embed/dZTwj26wuFY", id: "vid2"},
+    {videoUrl:"https://youtube.com/embed/IWN-NnChQRw", id: "vid3"},
+    {videoUrl:"https://youtube.com/embed/kxfEPoDoR3A", id: "vid4"}
+]
 const tours = [ 
-
     {date: 'Sun, Feb, 23rd', venue:'For Solo', location: 'Mexico Mexico'},
     {date: 'Sun, Feb, 24th', venue:'For Solo', location:  'Mexico Mexico'},
     {date: 'Thu, Feb, 27th', venue:'Festival Del Mar', location: 'Vina Del Chile'},
@@ -7,12 +12,10 @@ const tours = [
     {date: 'Sun, May, 31st', venue:'Chin Pavilion', location:  'Phoenix, AZ'},
     {date: 'Wed, Jun, 3rd', venue:'Wrigley Field', location: 'Chicago, IL'},
     {date: 'Wed, Jun, 24th', venue:'Fenway Park', location: 'Boston, MA'},
-    
 ];
 
 const merchItems = [
-    {
-        type: 'album',
+    {   type: 'album',
         title: 'Xcalibur',
         price: 5000,
         imgUrl: 'https://images.unsplash.com/photo-1526478806334-5fd488fcaabc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=790&q=80',
@@ -148,7 +151,15 @@ const merchSorter = (e) => {
         merchPrinter(sortedMerch);
     };
 };
-
+const videoBuilder = () => {
+    let domString = '';
+    for (let i = 0; i < homeVideos.length; i++) {
+        domString += `<div class="videos">`
+        domString += `<iframe width="560" height="315" src="${videoUrl}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+        domString += `<button id="nextVideo" type="button" class="btn btn-danger">Next Video </button>`
+        domString += ` </div>`
+    }
+}
 // const footerBuilder = () => {
 //     let domString = '';
 //     const date = newDate().getFullYear();
@@ -156,7 +167,9 @@ const merchSorter = (e) => {
 //     printToDom ('footer-text', domString);
 // }
 // footerBuilder();
-
+// const homeEvent = () => {
+//     document.getElementById('nextVideo').addEventListener('click',)
+// }
 const event = () => {
     document.getElementById('album').addEventListener('click', merchSorter);
     document.getElementById('tShirt').addEventListener('click', merchSorter);
