@@ -184,9 +184,9 @@ const albumBuilder = (builderArr)=> {
         domString += '<div class="col-md-7 col-lg-4 text-center d-flex">';
         domString +=  '<div>';
         domString +=    `<h3 class="albumTitle">${builderArr[i].title}</h3>`;
-        domString +=    `<img src="${builderArr[i].imgUrl}" class="aboutImg" alt="Album cover image">`;
+        domString +=    `<img src="${builderArr[i].imgUrl}" class="aboutImg zoom hover" alt="Album cover image">`;
         domString +=     `<div class="btn-group dropup">`
-        domString +=      `<button type="button" class="btn btn-secondary dropdown-toggle m-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Show Track List</button>`;
+        domString +=      `<button type="button" class="btn btn-secondary dropdown-toggle ml-4 mr-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Show Track List</button>`;
         domString +=       `<div class="dropdown-menu">`
         domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track1}</a>`
         domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track2}</a>`

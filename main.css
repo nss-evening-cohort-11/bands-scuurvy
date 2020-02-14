@@ -4,7 +4,6 @@
     text-align: center;
     margin: auto;
     min-height: 400px;
-
 }
 .block-title {
     display: block; 
@@ -79,7 +78,7 @@ h1 {
 }
 .aboutImg {
     min-width:25%;
-    max-width: 50%;
+    max-width: 70%;
     border-radius: 0%;
     border: 3px solid black;
     margin: 0px 70px 0px 70px;   
@@ -101,9 +100,10 @@ h1 {
 }
 .aboutCard {
     max-width:45%;
+    min-width: 500px;
     background-color: transparent;
     border-radius: 0%;
-    text-shadow: 1px 1px 2px white, 0 0 1em white, 0 0 0.8em black;
+    text-shadow: 2px 2px 5px white, 0 0 1em white, 0 0 0.8em black;
     font-weight: 600;
 }
 .card-img {
@@ -124,8 +124,18 @@ body{
     background-color: #6d6d6d;
 }
 .cardRight{
-    margin-left: 200px;
+    margin-left: 50%;
+    overflow: hidden;
 }
 .cardLeft{
-    margin-right: 200px;
+    margin-right: 50%;
+}
+.zoom {
+    transition: transform .2s;
+    margin: 0 auto;
+} 
+.zoom:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
 }
