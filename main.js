@@ -1,26 +1,19 @@
-<<<<<<< HEAD
+
 const homeVideos = [
     {videoUrl:"https://youtube.com/embed/yRZ-UF4do-A", id: "vid1"},
     {videoUrl:"https://youtube.com/embed/dZTwj26wuFY", id: "vid2"},
     {videoUrl:"https://youtube.com/embed/IWN-NnChQRw", id: "vid3"},
     {videoUrl:"https://youtube.com/embed/kxfEPoDoR3A", id: "vid4"}
 ]
-const tours = [ 
-=======
 
 const tourArray = [ 
->>>>>>> master
     {date: 'Sun, Feb, 23rd', venue:'For Solo', location: 'Mexico Mexico'},
     {date: 'Sun, Feb, 24th', venue:'For Solo', location:  'Mexico Mexico'},
     {date: 'Thu, Feb, 27th', venue:'Festival Del Mar', location: 'Vina Del Chile'},
     {date: 'Fri, Feb, 28th', venue:'Pepsi Center', location: 'Denver, CO'},
     {date: 'Sun, May, 31st', venue:'Chin Pavilion', location:  'Phoenix, AZ'},
     {date: 'Wed, Jun, 3rd', venue:'Wrigley Field', location: 'Chicago, IL'},
-<<<<<<< HEAD
-    {date: 'Wed, Jun, 24th', venue:'Fenway Park', location: 'Boston, MA'},
-=======
     {date: 'Wed, Jun, 24th', venue:'Fenway Park', location: 'Boston, MA'},   
->>>>>>> master
 ];
 
 const merchItems = [
