@@ -1,3 +1,11 @@
+.merchImages {
+    max-width: 300px;
+    border-radius: 10%;
+    text-align: center;
+    margin: auto;
+    min-height: 400px;
+
+}
 
 .block-title {
     display: block; 
@@ -68,13 +76,36 @@
     padding: -11px;
     text-transform: uppercase;
 }
-body {
-    background-color: rgb(51, 50, 50);
-}
-img {
+
+.logoPhoto {
     max-width: 200px;
     border-radius: 25%;
 }
+
 .form-check-label {
     color: white;
 }
+
+
+.img-center {
+    margin: 0 auto;
+}
+.spanImg{
+    min-width: 75%;
+    max-width: 100%; 
+}
+.aboutBody{
+    text-align: center;
+}
+.individualCards {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+    min-height: 400px;
+    background-color:#6d6d6d;
+    color: white;
+}
+
+
