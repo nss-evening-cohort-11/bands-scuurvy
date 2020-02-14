@@ -1,13 +1,12 @@
-const tours = [ 
 
+const tourArray = [ 
     {date: 'Sun, Feb, 23rd', venue:'For Solo', location: 'Mexico Mexico'},
     {date: 'Sun, Feb, 24th', venue:'For Solo', location:  'Mexico Mexico'},
     {date: 'Thu, Feb, 27th', venue:'Festival Del Mar', location: 'Vina Del Chile'},
     {date: 'Fri, Feb, 28th', venue:'Pepsi Center', location: 'Denver, CO'},
     {date: 'Sun, May, 31st', venue:'Chin Pavilion', location:  'Phoenix, AZ'},
     {date: 'Wed, Jun, 3rd', venue:'Wrigley Field', location: 'Chicago, IL'},
-    {date: 'Wed, Jun, 24th', venue:'Fenway Park', location: 'Boston, MA'},
-    
+    {date: 'Wed, Jun, 24th', venue:'Fenway Park', location: 'Boston, MA'},   
 ];
 
 const merchItems = [
@@ -83,12 +82,12 @@ const printToDom = (divId, textToPrint) => {
 
 const buildTourCards = () => {
     let domString = '';
-    for(let i = 0; i < tours.length; i++) {
+    for(let i = 0; i < tourArray.length; i++) {
       domString += '<div class="event">';
-      domString +=   `<span class="date">${tours[i].date}</span>`;
+      domString +=   `<span class="date">${tourArray[i].date}</span>`;
       domString += `<div class="details">`;
-      domString +=   `<div class="venue">${tours[i].venue}</div>`;
-      domString +=   `<div class="location">${tours[i].location}</div>`;
+      domString +=   `<div class="venue">${tourArray[i].venue}</div>`;
+      domString +=   `<div class="location">${tourArray[i].location}</div>`;
       domString += `</div>`;
       domString += '</div>';
     };
@@ -119,8 +118,8 @@ const merchPrinter = (lastArray) => {
         domString +=    '</div>'
         domString += '</div>'
     };
-    printToDom('merchCards', domString);
-    activatePurchaseButton();
+    // printToDom('merchCards', domString);
+    // activatePurchaseButton();
 };
 
 const activatePurchaseButton = () => {
@@ -133,6 +132,23 @@ const activatePurchaseButton = () => {
 const purchaseMerch = () => {
     alert("This item has been to your cart!");
 };
+// merchPrinter();
+
+
+const el = document.getElementById("subscribeButton");
+const submitForm = () => {
+    alert ("Thank you for subscribing!");
+};
+
+const tourInit = () => {
+    buildTourCards(tourArray)
+    tourEvent();
+};
+
+const tourEvent = () => {
+    el.addEventListener('click', submitForm);
+
+}
 
 const merchSorter = (e) => {
     const sortedMerch = [];
@@ -179,5 +195,6 @@ const init = () => {
     //     buildTourCards();
     // };
 };
+
 
 init();
