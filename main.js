@@ -118,8 +118,8 @@ const merchPrinter = (lastArray) => {
         domString +=    '</div>'
         domString += '</div>'
     };
-    // printToDom('merchCards', domString);
-    // activatePurchaseButton();
+    printToDom('merchCards', domString);
+    activatePurchaseButton();
 };
 
 const activatePurchaseButton = () => {
@@ -165,36 +165,14 @@ const merchSorter = (e) => {
     };
 };
 
-// const footerBuilder = () => {
-//     let domString = '';
-//     const date = newDate().getFullYear();
-//     domString += `<p class="col-xs-1 text-center"> &copy Scuurvy ${date} </p>`;
-//     printToDom ('footer-text', domString);
-// }
-// footerBuilder();
-
-const event = () => {
+const merchEvent = () => {
     document.getElementById('album').addEventListener('click', merchSorter);
     document.getElementById('tShirt').addEventListener('click', merchSorter);
     document.getElementById('hat').addEventListener('click', merchSorter);
     document.getElementById('all').addEventListener('click', merchSorter);
 };
 
-const init = () => {
-
-    // if (window.location.pathname == 'bands-scuurvy/merchandise.html'){
+const merchInit = () => {
     merchPrinter(merchItems)    
-    event();
-    
-    // if (window.location.pathname === '.merchandise.html'){
-    merchPrinter(merchItems); 
-    event();
-
-    // };
-    // if (window.location.pathname === '/.tour.html') {
-    //     buildTourCards();
-    // };
+    merchEvent();
 };
-
-
-init();
