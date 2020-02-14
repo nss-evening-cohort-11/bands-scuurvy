@@ -6,7 +6,6 @@
     min-height: 400px;
 
 }
-
 .block-title {
     display: block; 
     position: relative; 
@@ -23,7 +22,6 @@
     font-size: 40px;
     color: white;
 }
-
 .event {
     display: flex;
     flex-direction: row;
@@ -37,7 +35,6 @@
     border-right: none;
     width: 70%;
 }
-
 .location .venue {
     font-size: 45px;
     font-style: normal;
@@ -65,15 +62,13 @@ img {
     max-width: 200px;
     border-radius: 25%;
 }
-
 .img-center {
     margin: 0 auto;
 }
 .spanImg {
     min-width: 65%;
-    max-width: 65%;
+    max-width: 100%;
     border-radius: 0%;
-
 }
 h1 {
     color: white;
@@ -92,7 +87,6 @@ h1 {
 .aboutHeading {
     color: white;
 }
-<<<<<<< HEAD
 .aboutP {
     font-size: 20px;
     margin: 30px;
@@ -102,18 +96,20 @@ h1 {
     border-radius: 0%;
     min-width: 100%;   
 }
-
 .bandAbout {
     min-width: 50%;
 }
 .aboutCard {
-    max-width:50%;
+    max-width:45%;
+    background-color: transparent;
+    border-radius: 0%;
+    text-shadow: 1px 1px 2px white, 0 0 1em white, 0 0 0.8em black;
+    font-weight: 600;
 }
-.card-img{
+.card-img {
     min-width: 100%;
+    border-radius: 0%;
 }
-=======
-
 .individualCards {
     padding: 20px;
     display: flex;
@@ -124,6 +120,12 @@ h1 {
     background-color:#6d6d6d;
     color: white;
 }
-
-
->>>>>>> 072778de7c596262b40cefb16a8195eff3a45a3a
+body{
+    background-color: #6d6d6d;
+}
+.cardRight{
+    margin-left: 200px;
+}
+.cardLeft{
+    margin-right: 200px;
+}
