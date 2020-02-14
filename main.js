@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 const tours = [ 
 
     {date: 'Sun, Feb, 23rd', venue:'For Solo', location: 'Mexico Mexico'},
@@ -11,7 +9,6 @@ const tours = [
     {date: 'Wed, Jun, 24th', venue:'Fenway Park', location: 'Boston, MA'},
     
 ];
->>>>>>> 030a1d05757fe2394b66d1cf553f520c7eb32022
 
 const merchItems = [
     {
@@ -148,14 +145,19 @@ const merchSorter = (e) => {
         for (let i = 0; i < merchItems.length; i++) {
             if (merchItems[i].type === buttonId) {
                 sortedMerch.push(merchItems[i]);
-            
             }; 
         };
         merchPrinter(sortedMerch);
     };
 };
 
-
+// const footerBuilder = () => {
+//     let domString = '';
+//     const date = newDate().getFullYear();
+//     domString += `<p class="col-xs-1 text-center"> &copy Scuurvy ${date} </p>`;
+//     printToDom ('footer-text', domString);
+// }
+// footerBuilder();
 
 const event = () => {
     document.getElementById('album').addEventListener('click', merchSorter);
@@ -166,9 +168,8 @@ const event = () => {
 
 const init = () => {
     // if (window.location.pathname === '.merchandise.html'){
-    merchPrinter(merchItems)    
+    merchPrinter(merchItems); 
     event();
-;
     // };
     // if (window.location.pathname === '/.tour.html') {
     //     buildTourCards();
