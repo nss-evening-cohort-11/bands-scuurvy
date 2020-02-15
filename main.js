@@ -13,85 +13,27 @@ const tourArray = [
     {date: 'Fri, Feb, 28th', venue:'Pepsi Center', location: 'Denver, CO'},
     {date: 'Sun, May, 31st', venue:'Chin Pavilion', location:  'Phoenix, AZ'},
     {date: 'Wed, Jun, 3rd', venue:'Wrigley Field', location: 'Chicago, IL'},
-    {date: 'Wed, Jun, 24th', venue:'Fenway Park', location: 'Boston, MA'},
+    {date: 'Wed, Jun, 24th', venue:'Fenway Park', location: 'Boston, MA'},   
 ];
 
-const merchItems = [
-    {
-        type: 'album',
-        title: 'Rubber Duck',
-        price: 5000,
-        imgUrl: 'bandpics/icecreamalbum.png',
-        buttonId: 'a'
-    },
-    {
-        type: 'album',
-        title: 'What Day Is It',
-        price: 5000,
-        imgUrl: 'bandpics/girlsalbum.png',
-        buttonId: 'b'
-    },
-    {
-        type: 'album',
-        title: 'Make Em Shower Cry',
-        price: 5000,
-        imgUrl: 'bandpics/takeit.png',
-        buttonId: 'c'
-    },    
-    {
-        type: 'tShirt',
-        title: 'Zoe T-Shirt',
-        price: 5000,
-        imgUrl: 'https://i.imgur.com/r9tz26G.png',
-        buttonId: 'd'
-    },
-    {
-        type: 'tShirt',
-        title: 'Luke T-Shirt',
-        price: 5000,
-        imgUrl: 'https://i.imgur.com/EA34ZF7.png',
-        buttonId: 'e'
-    },
-    {
-        type: 'tShirt',
-        title: 'Mary T-Shirt',
-        price: 5000,
-        imgUrl: 'https://i.imgur.com/OiAaEap.png',
-        buttonId: 'f'
-    },
-    {
-        type: 'tShirt',
-        title: 'Greg T-Shirt',
-        price: 5000,
-        imgUrl: 'https://i.imgur.com/0vNM6lA.png',
-        buttonId: 'r'
-    },
-    {
-        type: 'hat',
-        title: 'Zoe Hat',
-        price: 5000,
-        imgUrl: 'https://i.imgur.com/GY6iLC6.jpg',
-        buttonId: '3'
-    },
-    {
-        type: 'hat',
-        title: 'Mary Hat',
-        price: 5000,
-        imgUrl: 'https://i.imgur.com/0pStUHE.png',
-        buttonId: '2'
-    },
-    {
-        type: 'hat',
-        title: 'Luke Hat',
-        price: 5000,
-        imgUrl: 'https://i.imgur.com/MhCy87C.png',
-        id: '1'
-    }
+const tourImageArray = [
+    {imgUrl: "https://i.imgur.com/P5tfqfW.png"},
+    {imgUrl: "https://i.imgur.com/2ukHHTx.png"},
+    {imgUrl: "https://i.imgur.com/IzCg99m.png"},
+    {imgUrl: "https://i.imgur.com/mxr4RTQ.png"},
+    {imgUrl: "https://i.imgur.com/SGjuwVh.png"},
+    {imgUrl: "https://i.imgur.com/or86tp6.png"},
+    {imgUrl: "https://i.imgur.com/xcOBNBW.png"},
+    {imgUrl: "https://i.imgur.com/pnnPLox.png"},
+    {imgUrl: "https://i.imgur.com/fSlbZ4H.png"},
+    {imgUrl: "https://i.imgur.com/dQFoCkr.png"},
+    {imgUrl: "https://i.imgur.com/VRfGkU6.png"},
+    {imgUrl: "https://i.imgur.com/kcBxuBB.png"},
 ];
+
 const albumArr = [
     {
     title: "Make Em Shower Cry",
-    imgUrl: "./takeit.png",
     imgUrl: "bandpics/takeit.png",
     buttonId: "MakeEmShowerCry",
     trackList: {
@@ -106,7 +48,6 @@ const albumArr = [
     },
     {
     title: "What Day Is It",
-    imgUrl: "girlsalbum.png",
     imgUrl: "bandpics/girlsalbum.png",
     buttonId: "WhatDayIsIt",
     trackList: {
@@ -121,7 +62,6 @@ const albumArr = [
     },
     {
     title: "Rubber Duck",
-    imgUrl: "icecreamalbum.png",
     imgUrl: "bandpics/icecreamalbum.png",
     buttonId: "RubberDuck",
     trackList: {
@@ -133,6 +73,97 @@ const albumArr = [
         track6: "Crashin Computers",
         track7: "Coding Reject"
         }
+    }
+];
+
+const merchItems = [
+    {
+        type: 'album',
+        title: 'Rubber Duck',
+        price: 89.53,
+        imgUrl: 'bandpics/icecreamalbum.png',
+        buttonId: 'a',
+        description: 'All the hits from years past'
+    },
+    {
+        type: 'album',
+        title: 'What Day Is It',
+        price: 52.24,
+        imgUrl: 'bandpics/girlsalbum.png',
+        buttonId: 'b',
+        description: 'Recorded live in Paris, Kentucky'
+    },
+    {
+        type: 'album',
+        title: 'Make Em Shower Cry',
+        price: 48.57,
+        imgUrl: 'bandpics/takeit.png',
+        buttonId: 'c',
+        description: 'Multi-platinum, grammy nominated, debut album'
+    },    
+    {
+        type: 'tShirt',
+        title: 'Zoe T-Shirt',
+        price: 23.58,
+        imgUrl: 'https://i.imgur.com/r9tz26G.png',
+        buttonId: 'd',
+        description: 'Where it all started'
+    },
+    {
+        type: 'tShirt',
+        title: 'Luke T-Shirt',
+        price: 8.99,
+        imgUrl: 'https://i.imgur.com/EA34ZF7.png',
+        buttonId: 'e',
+        description: 'Sizing runs small'
+    },
+    {
+        type: 'tShirt',
+        title: 'Mary T-Shirt',
+        price: 14.63,
+        imgUrl: 'https://i.imgur.com/OiAaEap.png',
+        buttonId: 'f',
+        description: 'Deals like this don\'t happen everyday!'
+    },
+    {
+        type: 'tShirt',
+        title: 'Greg T-Shirt',
+        price: 45.25,
+        imgUrl: 'https://i.imgur.com/0vNM6lA.png',
+        buttonId: 'r',
+        description: 'Fit in with all the cool kids'
+    },
+    {
+        type: 'hat',
+        title: 'Zoe Hat',
+        price: 10.99,
+        imgUrl: 'https://i.imgur.com/GY6iLC6.jpg',
+        buttonId: '3',
+        description: 'On clearance!!'
+    },
+    {
+        type: 'hat',
+        title: 'Mary Hat',
+        price: 15.88,
+        imgUrl: 'https://i.imgur.com/0pStUHE.png',
+        buttonId: '2',
+        description: 'Get em while they last!!'
+    },
+    {
+        type: 'hat',
+        title: 'Luke Hat',
+        price: 26.78,
+        imgUrl: 'https://i.imgur.com/MhCy87C.png',
+        id: '1',
+        description: 'Dead stock'
+    },
+    {
+        type: 'hat',
+        title: 'Greg Hat',
+        price: 5000,
+        imgUrl: 'https://i.imgur.com/KmeQkcu.png',
+        id: '10',
+        description: 'Makes a great gift!'
     }
 ];
 
@@ -156,11 +187,12 @@ const buildTourCards = (tourArray) => {
 const merchPrinter = (lastArray) => {
     let domString = '';
     for (let i = 0; i < lastArray.length; i++) {
-        domString += '<div class="col-md-6 col-lg-4">'
+        domString += '<div class="col-md-6 col-lg-4" id="merchCardContainer">'
         domString += '<div class="individualCards card" style="width: 20rem;">';
         domString +=    `<img src="${lastArray[i].imgUrl}" class="card-img-top rounded merchImages" alt="...">`
         domString +=    '<div class="card-body">'
         domString +=       `<h5 class="card-title d-flex justify-content-center">${lastArray[i].title}</h5>`
+        domString +=    `<p class="card-description d-flex justify-content-center">${lastArray[i].description}</p>`
         domString +=       `<p class="card-price d-flex justify-content-center">$   ${lastArray[i].price}</p>`
         if (lastArray[i].type === 'tShirt' || lastArray[i].type === 'hat') {
             domString += '<div class="dropdown text-center">'
@@ -198,29 +230,6 @@ const albumBuilder = (builderArr)=> {
     printToDom('album-list', domString);
 };
 
-const el = document.getElementById("subscribeButton");
-
-// const tourEvent = () => {
-//     el.addEventListener('click', submitForm);
-
-// }
-
-// const tourEvent =()=> {el.addEventListener('click', submitForm);}
-
-const tourImageArray = [
-    {imgUrl: "https://i.imgur.com/P5tfqfW.png"},
-    {imgUrl: "https://i.imgur.com/2ukHHTx.png"},
-    {imgUrl: "https://i.imgur.com/IzCg99m.png"},
-    {imgUrl: "https://i.imgur.com/mxr4RTQ.png"},
-    {imgUrl: "https://i.imgur.com/SGjuwVh.png"},
-    {imgUrl: "https://i.imgur.com/or86tp6.png"},
-    {imgUrl: "https://i.imgur.com/xcOBNBW.png"},
-    {imgUrl: "https://i.imgur.com/pnnPLox.png"},
-    {imgUrl: "https://i.imgur.com/fSlbZ4H.png"},
-    {imgUrl: "https://i.imgur.com/dQFoCkr.png"},
-    {imgUrl: "https://i.imgur.com/VRfGkU6.png"},
-    {imgUrl: "https://i.imgur.com/kcBxuBB.png"},
-];
 const buildTourPhoto = () => {
     let domString = '';
     for(let i = 0; i < tourImageArray.length; i++) {   
@@ -230,6 +239,7 @@ const buildTourPhoto = () => {
     };
     printToDom('tour-photos', domString);
     };
+
 const merchSorter = (e) => {
     const sortedMerch = [];
     const buttonId = e.target.id;
@@ -244,6 +254,7 @@ const merchSorter = (e) => {
         merchPrinter(sortedMerch);
     };
 };
+
 const videoBuilder = () => {
     let domString = '';
      for (let i = 0; i < homeVideos.length; i++) {
