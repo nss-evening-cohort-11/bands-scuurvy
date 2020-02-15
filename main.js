@@ -187,7 +187,8 @@ const buildTourCards = (tourArray) => {
 const merchPrinter = (lastArray) => {
     let domString = '';
     for (let i = 0; i < lastArray.length; i++) {
-        domString += '<div class="col-md-6 col-lg-4" id="merchCardContainer">'
+        domString += '<div class="row">'
+        domString += '<div class="col-lg-4 col-md-12 mb-lg-0 mb-4" id="merchCardContainer">'
         domString += '<div class="individualCards card" style="width: 20rem;">';
         domString +=    `<img src="${lastArray[i].imgUrl}" class="card-img-top rounded merchImages" alt="...">`
         domString +=    '<div class="card-body">'
@@ -207,6 +208,7 @@ const merchPrinter = (lastArray) => {
         domString +=       `<div class="text-center"><button class="btn btn-danger text-center" class="purchaseButton" id="${merchItems[i].buttonId}">Purchase</button></div>`;
         domString +=    '</div>'
         domString +=    '</div>'
+        domString += '</div>'
         domString += '</div>'
     };
     printToDom('merchCards', domString);
