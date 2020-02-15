@@ -6,6 +6,7 @@
     min-height: 400px;
 }
 
+
 #merchCardContainer {
     padding-right: -15px;
 }
@@ -13,7 +14,8 @@
 footer {
     color: white;}
 
-body{
+
+body {
     background-color: #343a40;
 }
 
@@ -202,6 +204,23 @@ h1 {
 .cardLeft {
     margin-right: 50%;
 }
+
+.zoom {
+    transition: transform .2s;
+    margin: 0 auto;
+} 
+.zoom:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+}
+
+#carouselPhotos img {
+    width: 60%;
+    margin: auto;
+
+}
+
 .album{
     min-width: 310px;
 }
@@ -346,3 +365,4 @@ h1 {
     filter: alpha(opacity=100);
     opacity: 1;
  }
+
