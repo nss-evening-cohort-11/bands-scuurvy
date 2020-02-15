@@ -16,25 +16,71 @@ const tourArray = [
     {date: 'Wed, Jun, 24th', venue:'Fenway Park', location: 'Boston, MA'},   
 ];
 
+const albumArr = [
+    {
+    title: "Make Em Shower Cry",
+    imgUrl: "bandpics/takeit.png",
+    buttonId: "MakeEmShowerCry",
+    trackList: {
+        track1: "Go Google it",
+        track2: "Nope Not it",
+        track3: "Keep Looking",
+        track4: "Maybe for Pie",
+        track5: "But Mary Said",
+        track6: "Class is not the Place",
+        track7: "Shower Cry"
+        }
+    },
+    {
+    title: "What Day Is It",
+    imgUrl: "bandpics/girlsalbum.png",
+    buttonId: "WhatDayIsIt",
+    trackList: {
+        track1: "Everyday I'm Co--de-in",
+        track2: "I Don't Dare",
+        track3: "Code Day-ya",
+        track4: "Girls just want to Code",
+        track5: "Tell Your Social Life Good-bye",
+        track6: "The Python Programming Song",
+        track7: "Let it Code"
+        }
+    },
+    {
+    title: "Rubber Duck",
+    imgUrl: "bandpics/icecreamalbum.png",
+    buttonId: "RubberDuck",
+    trackList: {
+        track1: "Please Help",
+        track2: "I Can't Get It",
+        track3: "Black fly in your Coding",
+        track4: "Well Isn't Nice",
+        track5: "Rubber Duck Silence",
+        track6: "Crashin Computers",
+        track7: "Coding Reject"
+        }
+    }
+];
+
 const merchItems = [
-    {   type: 'album',
-        title: 'Xcalibur',
+    {
+        type: 'album',
+        title: 'Rubber Duck',
         price: 5000,
-        imgUrl: 'https://images.unsplash.com/photo-1526478806334-5fd488fcaabc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=790&q=80',
+        imgUrl: 'bandpics/icecreamalbum.png',
         buttonId: 'a'
     },
     {
         type: 'album',
-        title: 'Feast of the Three Amigos',
+        title: 'What Day Is It',
         price: 5000,
-        imgUrl: 'https://images.unsplash.com/photo-1526478806334-5fd488fcaabc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=790&q=80',
+        imgUrl: 'bandpics/girlsalbum.png',
         buttonId: 'b'
     },
     {
         type: 'album',
-        title: 'Don\'t Start Nothin\' Won\'t Be Nothin\'',
+        title: 'Make Em Shower Cry',
         price: 5000,
-        imgUrl: 'https://images.unsplash.com/photo-1526478806334-5fd488fcaabc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=790&q=80',
+        imgUrl: 'bandpics/takeit.png',
         buttonId: 'c'
     },    
     {
@@ -57,6 +103,13 @@ const merchItems = [
         price: 5000,
         imgUrl: 'https://i.imgur.com/OiAaEap.png',
         buttonId: 'f'
+    },
+    {
+        type: 'tShirt',
+        title: 'Greg T-Shirt',
+        price: 5000,
+        imgUrl: 'https://i.imgur.com/0vNM6lA.png',
+        buttonId: 'r'
     },
     {
         type: 'hat',
@@ -84,9 +137,34 @@ const merchItems = [
 const printToDom = (divId, textToPrint) => {
     const selectedDiv = document.getElementById(divId);
     selectedDiv.innerHTML = textToPrint;
-  };
+};
 
-const buildTourCards = () => {
+const albumBuilder = (builderArr)=> {
+    let domString = "";
+    for (let i = 0; i < builderArr.length; i++){
+        domString += '<div class="col-md-7 col-lg-4 text-center d-flex">';
+        domString +=  '<div>';
+        domString +=    `<h3 class="albumTitle">${builderArr[i].title}</h3>`;
+        domString +=    `<img src="${builderArr[i].imgUrl}" class="aboutImg zoom hover  " alt="Album cover image">`;
+        domString +=     `<div class="btn-group dropup">`
+        domString +=      `<button type="button" class="btn btn-secondary dropdown-toggle ml-4 mr-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Show Track List</button>`;
+        domString +=       `<div class="dropdown-menu">`
+        domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track1}</a>`
+        domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track2}</a>`
+        domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track3}</a>`
+        domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track4}</a>`
+        domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track5}</a>`
+        domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track6}</a>`
+        domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track7}</a>`
+        domString +=        `</div>`;
+        domString +=      `</div>`;
+        domString +=   `</div>`;
+        domString += `</div>`
+    };
+    printToDom('album-list', domString);
+};
+
+const buildTourCards = (tourArray) => {
     let domString = '';
     for(let i = 0; i < tourArray.length; i++) {
       domString += '<div class="event">';
@@ -119,7 +197,7 @@ const merchPrinter = (lastArray) => {
             domString += '</div>'
             domString += '</div>'
         };
-        domString +=       `<div class="text-center"><button class="btn btn-danger text-center purchaseButton" id="${merchItems[i].buttonId}">Purchase</button></div>`;
+        domString +=       `<div class="text-center"><button class="btn btn-danger text-center" class="purchaseButton" id="${merchItems[i].buttonId}">Purchase</button></div>`;
         domString +=    '</div>'
         domString +=    '</div>'
         domString += '</div>'
@@ -127,34 +205,6 @@ const merchPrinter = (lastArray) => {
     printToDom('merchCards', domString);
     activatePurchaseButton();
 };
-
-const activatePurchaseButton = () => {
-    let getButton = document.getElementsByClassName("purchaseButton");
-    for (let i = 0; i < getButton.length; i++) {
-        getButton[i].addEventListener('click', purchaseMerch);
-    };
-};
-
-const purchaseMerch = () => {
-    alert("This item has been to your cart!");
-};
-// merchPrinter();
-
-
-const el = document.getElementById("subscribeButton");
-const submitForm = () => {
-    alert ("Thank you for subscribing!");
-};
-
-const tourInit = () => {
-    buildTourCards(tourArray)
-    tourEvent();
-};
-
-const tourEvent = () => {
-    el.addEventListener('click', submitForm);
-
-}
 
 const merchSorter = (e) => {
     const sortedMerch = [];
@@ -173,22 +223,43 @@ const merchSorter = (e) => {
 const videoBuilder = () => {
     let domString = '';
     for (let i = 0; i < homeVideos.length; i++) {
+        domString += `<div class="col-md-6 col-lg-4">`
         domString += `<div class="videos">`
         domString += `<iframe width="560" height="315" src="${videoUrl}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
         domString += `<button id="nextVideo" type="button" class="btn btn-danger">Next Video </button>`
         domString += ` </div>`
     }
+printToDom('homeVideos',domString)
 }
-// const footerBuilder = () => {
-//     let domString = '';
-//     const date = newDate().getFullYear();
-//     domString += `<p class="col-xs-1 text-center"> &copy Scuurvy ${date} </p>`;
-//     printToDom ('footer-text', domString);
-// }
-// footerBuilder();
 // const homeEvent = () => {
-//     document.getElementById('nextVideo').addEventListener('click',)
+// document.getElementById('nextVideo').addEventListener('click',)
 // }
+
+const activateButton = () =>{ 
+    let getButton = document.getElementsByClassName("trackButton");
+    for (let i = 0; i < getButton.length; i++) {
+    getButton[i].addEventListener('click', trackBuilder);
+    }; 
+};
+
+const activatePurchaseButton = () =>{ 
+    for (let i = 0; i < merchItems.length; i++){
+        document.getElementById(merchItems[i].buttonId).addEventListener('click', purchaseMerch);
+    };
+};
+
+const purchaseMerch = () => {
+    console.log('clcik')
+    alert("This item has been to your cart!");
+};
+
+const submitForm = () => {
+    alert ("Thank you for subscribing!");
+};
+
+const tourEvent = () => {
+    document.getElementById("subscribeButton").addEventListener('click', submitForm);
+};
 
 const merchEvent = () => {
     document.getElementById('album').addEventListener('click', merchSorter);
@@ -197,7 +268,16 @@ const merchEvent = () => {
     document.getElementById('all').addEventListener('click', merchSorter);
 };
 
+const aboutInit = () =>{
+    albumBuilder(albumArr);
+};
+
 const merchInit = () => {
-    merchPrinter(merchItems)    
+    merchPrinter(merchItems);    
     merchEvent();
+};
+
+const tourInit = () => {
+    buildTourCards(tours);
+    tourEvent();
 };
