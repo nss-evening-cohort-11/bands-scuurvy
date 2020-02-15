@@ -5,8 +5,8 @@
     margin: auto;
     min-height: 400px;
 }
-body{
-    background-color: #6d6d6d;
+body {
+    background-color: #343a40;
 }
 
 .block-title {
@@ -193,6 +193,7 @@ h1 {
 .cardLeft {
     margin-right: 50%;
 }
+
 .zoom {
     transition: transform .2s;
     margin: 0 auto;
@@ -208,6 +209,7 @@ h1 {
     margin: auto;
 
 }
+
 .album{
     min-width: 310px;
 }
@@ -352,6 +354,7 @@ h1 {
     filter: alpha(opacity=100);
     opacity: 1;
  }
+
 .videos {
     margin: 10px;
     padding: 5px;
