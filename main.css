@@ -17,6 +17,7 @@ footer {
 
 body {
     background-color: #343a40;
+
 }
 
 .block-title {
@@ -33,7 +34,7 @@ body {
     line-height: 1em;  
     opacity: .7;
     font-size: 40px;
-    color: white;
+    color:red;
 }
 .form-title {
     display: block; 
@@ -108,18 +109,23 @@ body {
 h1 {
     color: red;
     padding: 20px;
+    font-family: 'Oswald', sans-serif;
+    
 }
 h2{
     color:red;
     padding: 20px;
+    font-family: 'Roboto', sans-serif;
 }
 h3{
     color:red;
     padding: 20px;
+    font-family: 'Roboto', sans-serif;
 }
 h4{
     color:red;
     padding: 20px; 
+    font-family: 'Roboto', sans-serif;
 }
 .albumTitle {
     font-size: 25px;
@@ -388,6 +394,6 @@ h4{
     shadow: 2 2;
 }
 #footer-text {
-    padding-bottom: 40px;
+    padding: 40px;
     color: #6d6d6d;
 }
