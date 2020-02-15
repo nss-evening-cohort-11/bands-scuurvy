@@ -7,7 +7,8 @@ const tours = [
     {date: 'Sun, May, 31st', venue:'Chin Pavilion', location:  'Phoenix, AZ'},
     {date: 'Wed, Jun, 3rd', venue:'Wrigley Field', location: 'Chicago, IL'},
     {date: 'Wed, Jun, 24th', venue:'Fenway Park', location: 'Boston, MA'},
-    
+]
+
 const merchItems = [
     {
         type: 'album',
@@ -194,7 +195,6 @@ const el = document.getElementById("subscribeButton");
 
 // const tourEvent =()=> {el.addEventListener('click', submitForm);}
 
-
 const tourImageArray = [
     {imgUrl: "https://i.imgur.com/P5tfqfW.png"},
     {imgUrl: "https://i.imgur.com/2ukHHTx.png"},
@@ -246,7 +246,6 @@ const activatePurchaseButton = () =>{
 };
 
 const purchaseMerch = () => {
-    console.log('click')
     alert("This item has been to your cart!");
 };
 
