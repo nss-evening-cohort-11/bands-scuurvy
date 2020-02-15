@@ -6,7 +6,7 @@
     min-height: 400px;
 }
 body{
-    background-color: #6d6d6d;
+    background-color: #343840;
 }
 
 .block-title {
@@ -97,6 +97,11 @@ body{
 }
 h1 {
     color: white;
+    padding: 20px;
+}
+h2{
+    color: white;
+    padding: 20px;
 }
 .albumTitle {
     font-size: 25px;
@@ -114,7 +119,9 @@ h1 {
 .aboutP {
     font-size: 20px;
     margin: 30px;
+    color: lightgray;
 }
+
 .bandMember {
     border-radius: 0%;
     min-width: 100%;   
