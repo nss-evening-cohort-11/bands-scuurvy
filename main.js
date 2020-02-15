@@ -1,5 +1,12 @@
-const tours = [ 
 
+const homeVideos = [
+    {videoUrl:"https://youtube.com/embed/yRZ-UF4do-A", id: "vid1"},
+    {videoUrl:"https://youtube.com/embed/dZTwj26wuFY", id: "vid2"},
+    {videoUrl:"https://youtube.com/embed/IWN-NnChQRw", id: "vid3"},
+    {videoUrl:"https://youtube.com/embed/kxfEPoDoR3A", id: "vid4"}
+];
+
+const tourArray = [ 
     {date: 'Sun, Feb, 23rd', venue:'For Solo', location: 'Mexico Mexico'},
     {date: 'Sun, Feb, 24th', venue:'For Solo', location:  'Mexico Mexico'},
     {date: 'Thu, Feb, 27th', venue:'Festival Del Mar', location: 'Vina Del Chile'},
@@ -221,9 +228,7 @@ const albumBuilder = (builderArr)=> {
         domString += `</div>`
     };
     printToDom('album-list', domString);
-}
-
-const el = document.getElementById("subscribeButton");
+};
 
 const buildTourPhoto = () => {
     let domString = '';
@@ -249,6 +254,18 @@ const merchSorter = (e) => {
         merchPrinter(sortedMerch);
     };
 };
+
+const videoBuilder = () => {
+    let domString = '';
+     for (let i = 0; i < homeVideos.length; i++) {
+        domString += '<div class="d-flex justify-content-center flex-wrap rows row-col-4">'
+        domString += `<iframe width="560" height="315" class="videos" src="${homeVideos[i].videoUrl}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+        domString += `</div>`
+    }
+printToDom('loopVideos',domString);
+};
+
+
 const activateButton = () =>{ 
     let getButton = document.getElementsByClassName("trackButton");
     for (let i = 0; i < getButton.length; i++) {
@@ -281,6 +298,9 @@ const merchEvent = () => {
     document.getElementById('hat').addEventListener('click', merchSorter);
     document.getElementById('all').addEventListener('click', merchSorter);
 };
+const homeInit = () => {
+    videoBuilder(homeVideos);
+}
 
 const aboutInit =()=>{
     albumBuilder(albumArr);
@@ -290,8 +310,9 @@ const merchInit = () => {
     merchPrinter(merchItems);   
     merchEvent();
 };
+
 const tourInit = () => {
-    buildTourCards(tours)
+    buildTourCards(tourArray)
     tourEvent();
     buildTourPhoto();
 };
