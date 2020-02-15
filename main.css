@@ -7,6 +7,9 @@
 
 
 } */
+body{
+    background-color: #6d6d6d;
+}
 
 .block-title {
     display: block; 

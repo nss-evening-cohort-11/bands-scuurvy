@@ -7,7 +7,8 @@ const tours = [
     {date: 'Sun, May, 31st', venue:'Chin Pavilion', location:  'Phoenix, AZ'},
     {date: 'Wed, Jun, 3rd', venue:'Wrigley Field', location: 'Chicago, IL'},
     {date: 'Wed, Jun, 24th', venue:'Fenway Park', location: 'Boston, MA'},
-    
+]
+  
 const merchItems = [
     {
         type: 'album',
