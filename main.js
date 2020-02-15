@@ -188,7 +188,7 @@ const merchPrinter = (lastArray) => {
     let domString = '';
     for (let i = 0; i < lastArray.length; i++) {
         domString += '<div class="row">'
-        domString += '<div class="col-lg-4 col-md-12 mb-lg-0 mb-4" id="merchCardContainer">'
+        domString += '<div class="col-lg-4 col-md-12 mb-lg-1 mb-4" id="merchCardContainer">'
         domString += '<div class="individualCards card" style="width: 20rem;">';
         domString +=    `<img src="${lastArray[i].imgUrl}" class="card-img-top rounded merchImages" alt="...">`
         domString +=    '<div class="card-body">'
