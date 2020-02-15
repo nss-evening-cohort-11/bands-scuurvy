@@ -199,6 +199,47 @@ const merchPrinter = (lastArray) => {
     activatePurchaseButton();
 };
 
+const el = document.getElementById("subscribeButton");
+
+const tourInit = () => {
+    buildTourCards(tours)
+    tourEvent();
+    buildTourPhoto();
+};
+
+// const tourEvent = () => {
+//     el.addEventListener('click', submitForm);
+
+// }
+
+
+const tourImageArray = [
+    {imgUrl: "https://i.imgur.com/P5tfqfW.png"},
+    {imgUrl: "https://i.imgur.com/2ukHHTx.png"},
+    {imgUrl: "https://i.imgur.com/IzCg99m.png"},
+    {imgUrl: "https://i.imgur.com/mxr4RTQ.png"},
+    {imgUrl: "https://i.imgur.com/SGjuwVh.png"},
+    {imgUrl: "https://i.imgur.com/or86tp6.png"},
+    {imgUrl: "https://i.imgur.com/xcOBNBW.png"},
+    {imgUrl: "https://i.imgur.com/pnnPLox.png"},
+    {imgUrl: "https://i.imgur.com/fSlbZ4H.png"},
+    {imgUrl: "https://i.imgur.com/dQFoCkr.png"},
+    {imgUrl: "https://i.imgur.com/VRfGkU6.png"},
+    {imgUrl: "https://i.imgur.com/kcBxuBB.png"},
+];
+
+const buildTourPhoto = () => {
+    let domString = '';
+    for(let i = 0; i < tourImageArray.length; i++) {   
+    domString+=`<div class="tour-card" style="width: 18rem;">`
+    domString+= `<img class="tour-picture" src="${tourImageArray[i].imgUrl}" alt="Card image cap">`
+    domString+= `</div>`
+    };
+    printToDom('tour-photos', domString);
+    };
+
+
+
 const merchSorter = (e) => {
     const sortedMerch = [];
     const buttonId = e.target.id;
@@ -214,6 +255,7 @@ const merchSorter = (e) => {
     };
 };
 
+
 const activateButton = () =>{ 
     let getButton = document.getElementsByClassName("trackButton");
     for (let i = 0; i < getButton.length; i++) {
@@ -228,7 +270,7 @@ const activatePurchaseButton = () =>{
 };
 
 const purchaseMerch = () => {
-    console.log('clcik')
+    console.log('click')
     alert("This item has been to your cart!");
 };
 
@@ -241,6 +283,7 @@ const tourEvent = () => {
 };
 
 const merchEvent = () => {
+
     document.getElementById('album').addEventListener('click', merchSorter);
     document.getElementById('tShirt').addEventListener('click', merchSorter);
     document.getElementById('hat').addEventListener('click', merchSorter);
@@ -256,7 +299,5 @@ const merchInit = () => {
     merchEvent();
 };
 
-const tourInit = () => {
-    buildTourCards(tours);
-    tourEvent();
-};
+
+
