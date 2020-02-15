@@ -96,12 +96,18 @@ body{
     padding-top: 30px;
 }
 h1 {
-    color: white;
+    color: red;
     padding: 20px;
 }
 h2{
-    color: white;
+    color:red;
     padding: 20px;
+}
+h3{
+    color:red;
+}
+h4{
+    color:red; 
 }
 .albumTitle {
     font-size: 25px;
