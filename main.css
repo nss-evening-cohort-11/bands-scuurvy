@@ -18,6 +18,7 @@ footer {
 
 body {
     background-color: #343a40;
+
 }
 
 .block-title {
@@ -34,7 +35,7 @@ body {
     line-height: 1em;  
     opacity: .7;
     font-size: 40px;
-    color: white;
+    color:red;
 }
 .form-title {
     display: block; 
@@ -107,7 +108,25 @@ body {
     padding-top: 30px;
 }
 h1 {
-    color: white;
+    color: red;
+    padding: 20px;
+    font-family: 'Oswald', sans-serif;
+    
+}
+h2{
+    color:red;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+h3{
+    color:red;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+h4{
+    color:red;
+    padding: 20px; 
+    font-family: 'Roboto', sans-serif;
 }
 .albumTitle {
     font-size: 25px;
@@ -125,7 +144,9 @@ h1 {
 .aboutP {
     font-size: 20px;
     margin: 30px;
+    color: lightgray;
 }
+
 .bandMember {
     border-radius: 0%;
     min-width: 100%;   
@@ -372,4 +393,8 @@ h1 {
     padding: 5px;
     border: 1px black;
     shadow: 2 2;
+}
+#footer-text {
+    padding: 40px;
+    color: #6d6d6d;
 }
