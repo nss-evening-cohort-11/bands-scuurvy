@@ -105,9 +105,11 @@ h2{
 }
 h3{
     color:red;
+    padding: 20px;
 }
 h4{
-    color:red; 
+    color:red;
+    padding: 20px; 
 }
 .albumTitle {
     font-size: 25px;
@@ -373,4 +375,8 @@ h4{
     padding: 5px;
     border: 1px black;
     shadow: 2 2;
+}
+#footer-text {
+    padding-bottom: 40px;
+    color: #6d6d6d;
 }
