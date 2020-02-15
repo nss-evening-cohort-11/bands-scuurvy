@@ -5,6 +5,16 @@
     margin: auto;
     min-height: 400px;
 }
+
+
+#merchCardContainer {
+    padding-right: -15px;
+}
+
+footer {
+    color: white;}
+
+
 body {
     background-color: #343a40;
 }
@@ -144,6 +154,7 @@ h1 {
     min-height: 400px;
     background-color:#6d6d6d;
     color: white;
+    min-width: 200px;
 }
 .tour-picture {
     border-radius: 0;
