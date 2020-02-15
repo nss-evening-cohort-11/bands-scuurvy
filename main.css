@@ -174,7 +174,6 @@ h1 {
     -ms-transform: rotate(-10deg);
     transform: rotate(-10deg);
       }
-    
 
 .tour-card {
     padding: 10px;
@@ -211,8 +210,9 @@ body {
     transform: scale(1.5); 
 }
 
-.videos {
-    width: 100%;
-    margin: 2px;
+
+#carouselPhotos img {
+    width: 60%;
+    margin: auto;
 
 }
