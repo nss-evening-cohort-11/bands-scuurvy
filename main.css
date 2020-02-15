@@ -5,8 +5,8 @@
     margin: auto;
     min-height: 400px;
 }
-body{
-    background-color: #343840;
+body {
+    background-color: #343a40;
 }
 
 .block-title {
@@ -206,6 +206,23 @@ h4{
 .cardLeft {
     margin-right: 50%;
 }
+
+.zoom {
+    transition: transform .2s;
+    margin: 0 auto;
+} 
+.zoom:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+}
+
+#carouselPhotos img {
+    width: 60%;
+    margin: auto;
+
+}
+
 .album{
     min-width: 310px;
 }
@@ -350,3 +367,10 @@ h4{
     filter: alpha(opacity=100);
     opacity: 1;
  }
+
+.videos {
+    margin: 10px;
+    padding: 5px;
+    border: 1px black;
+    shadow: 2 2;
+}
