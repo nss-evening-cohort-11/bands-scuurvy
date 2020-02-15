@@ -87,8 +87,9 @@
 }
 .spanImg {
     min-width: 65%;
-    max-width: 100%;
+    max-width: 65%;
     border-radius: 0%;
+    padding-top: 30px;
 }
 h1 {
     color: white;
@@ -101,7 +102,6 @@ h1 {
     min-width:25%;
     max-width: 70%;
     border-radius: 0%;
-    border: 3px solid black;
     margin: 0px 70px 0px 70px;   
 }
 .aboutHeading {
@@ -111,7 +111,6 @@ h1 {
     font-size: 20px;
     margin: 30px;
 }
-
 .bandMember {
     border-radius: 0%;
     min-width: 100%;   
@@ -126,6 +125,7 @@ h1 {
     border-radius: 0%;
     text-shadow: 2px 2px 5px white, 0 0 1em white, 0 0 0.8em black;
     font-weight: 600;
+    margin: 20px;
 }
 .card-img {
     min-width: 100%;
@@ -141,10 +141,10 @@ h1 {
     background-color:#6d6d6d;
     color: white;
 }
-body{
+body {
     background-color: #6d6d6d;
 }
-.cardRight{
+.cardRight {
     margin-left: 50%;
     overflow: hidden;
 }
@@ -156,6 +156,10 @@ body{
 }
 .aboutVideo{
     margin: 10%;
+}
+#album-list{
+    max-width:1150px;
+    margin: auto;
 }
 .carousel-inner img {
     margin: auto;
