@@ -24,7 +24,7 @@
     </div>
   </nav>
 <body>
-    <h1 class="d-flex justify-content-center text-color-danger">Home</h1>  
+    <h1 class="d-flex justify-content-center flex-wrap">Home</h1>  
     <div id="carouselPhotos" class="d-flex text-center carousel slide " data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active" data-interval="4000">
@@ -38,19 +38,21 @@
         </div>
       </div>
     </div>
+    <h2 class="d-flex justify-content-center flex-wrap text-danger">Missed Us on Tour? Check Out Our Tour Videos Here</h2>  
+    <div class= "videos d-flex justify-content-center flex-wrap" id="loopVideos">
+      </div>
+    </div>
+  </div>
 
     <!-- Section: Testimonials v.1 -->
 <section class="text-center my-5 p-1">
-
     <!-- Section heading -->
     <h2 class="h1-responsive font-weight-bold my-5">Fan Testimonials</h2>
     <!-- Section description -->
     <p class="dark-grey-text w-responsive mx-auto mb-5">Here's what fans are saying about Scurrvy!</p>
-  
-    <!-- Grid row -->
+      <!-- Grid row -->
     <div class="row">
-  
-      <!--Grid column-->
+        <!--Grid column-->
       <div class="col-lg-4 col-md-12 mb-lg-0 mb-4">
         <!--Card-->
         <div class="card testimonial-card">
@@ -87,6 +89,7 @@
             <!--Name-->
             <h4 class="font-weight-bold mb-4">Jackie Daniels</h4>            
             <!--Quotation-->
+            <hr>
             <p class="dark-grey-text mt-4"><i class="fas fa-quote-left pr-2"></i>This concert left me inspired! I felt a euphoria than can't be put into words, but if I tried, I'd sum it up as that moment when you drop your phone and realize the phone didn't crack...that's how happy I was when the music stopped!</p>
           </div>
         </div>
@@ -121,11 +124,12 @@
   
   </section>
   <!-- Section: Testimonials v.1 -->
-    
+
 <footer class="d-flex col-xs-1 justify-content-center" id='footer-text'> &copy Scuurvy 2020 </footer>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>    
 <script src="./main.js"></script>    
+<script> homeInit(); </script>
 </body>
 </html>

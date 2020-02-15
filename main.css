@@ -355,3 +355,9 @@ h1 {
     opacity: 1;
  }
 
+.videos {
+    margin: 10px;
+    padding: 5px;
+    border: 1px black;
+    shadow: 2 2;
+}
