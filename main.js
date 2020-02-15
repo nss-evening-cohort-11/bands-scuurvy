@@ -1,9 +1,10 @@
 
 const homeVideos = [
-    {videoUrl:"https://youtube.com/embed/yRZ-UF4do-A", id: "vid1"},
-    {videoUrl:"https://youtube.com/embed/dZTwj26wuFY", id: "vid2"},
-    {videoUrl:"https://youtube.com/embed/IWN-NnChQRw", id: "vid3"},
-    {videoUrl:"https://youtube.com/embed/kxfEPoDoR3A", id: "vid4"}
+    {videoUrl:"https://youtube.com/embed/yRZ-UF4do-A"},
+    {videoUrl:"https://youtube.com/embed/dZTwj26wuFY"},
+    {videoUrl:"https://youtube.com/embed/IWN-NnChQRw"},
+    {videoUrl:"https://youtube.com/embed/kxfEPoDoR3A"},
+    {videoUrl:"https://youtube.com/embed/VZdpK9dpni0"}
 ];
 
 const tourArray = [ 
@@ -187,7 +188,8 @@ const buildTourCards = (tourArray) => {
 const merchPrinter = (lastArray) => {
     let domString = '';
     for (let i = 0; i < lastArray.length; i++) {
-        domString += '<div class="col-md-6 col-lg-4" id="merchCardContainer">'
+        domString += '<div class="row">'
+        domString += '<div class="col-lg-4 col-md-12 mb-lg-1 mb-4" id="merchCardContainer">'
         domString += '<div class="individualCards card" style="width: 20rem;">';
         domString +=    `<img src="${lastArray[i].imgUrl}" class="card-img-top rounded merchImages" alt="...">`
         domString +=    '<div class="card-body">'
@@ -207,6 +209,7 @@ const merchPrinter = (lastArray) => {
         domString +=       `<div class="text-center"><button class="btn btn-danger text-center" class="purchaseButton" id="${merchItems[i].buttonId}">Purchase</button></div>`;
         domString +=    '</div>'
         domString +=    '</div>'
+        domString += '</div>'
         domString += '</div>'
     };
     printToDom('merchCards', domString);
