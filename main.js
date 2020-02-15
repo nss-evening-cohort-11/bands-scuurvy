@@ -9,7 +9,6 @@ const tours = [
     {date: 'Wed, Jun, 24th', venue:'Fenway Park', location: 'Boston, MA'},
     
 ];
-
 const merchItems = [
     {
         type: 'album',
@@ -186,23 +185,6 @@ const albumArr = [
         }
     }
 ];
-/* <div class="col-xs-6 col-sm-3">
-        <div class="overlay-item overlay-effect">
-          <img src="http://placeimg.com/260/260/nature/7/" alt="" />
-            <div class="mask">
-              <h3>OVERLAY</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus doloremque natus quidem id.
-              </p>
-              <a href="#" class="btn btn-default">Read More</a>
-            </div>
-        </div>
-        <h4 class="text-center">Overlay Text</h4>
-    </div> */
-
-
-
-
 const albumBuilder = (builderArr)=> {
     let domString = "";
     for (let i = 0; i < builderArr.length; i++){
@@ -217,22 +199,6 @@ const albumBuilder = (builderArr)=> {
         domString +=  `</div>`;
         domString +=    `<h4 class="text-center">${builderArr[i].title}</h4>`;
         domString += `</div>`
-
-        //domString +=    `<img src="${builderArr[i].imgUrl}" class="aboutImg zoom hover  "alt="Album cover image">`;
-        //domString +=     `<div class="btn-group dropup">`
-        // domString +=      `<button type="button" class="btn btn-secondary dropdown-toggle ml-4 mr-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Show Track List</button>`;
-        // domString +=       `<div class="dropdown-menu">`
-        // domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track1}</a>`
-        // domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track2}</a>`
-        // domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track3}</a>`
-        // domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track4}</a>`
-        // domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track5}</a>`
-        // domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track6}</a>`
-        // domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track7}</a>`
-        // domString +=        `</div>`;
-        // domString +=      `</div>`;
-        // domString +=   `</div>`;
-        // domString += `</div>`
     };
     printToDom('album-list', domString);
 }
