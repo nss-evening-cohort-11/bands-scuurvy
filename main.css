@@ -372,3 +372,9 @@ h1 {
     border: 1px black;
     shadow: 2 2;
 }
+
+.card-body {
+    background-color: #6d6d6d;
+}
+
+
