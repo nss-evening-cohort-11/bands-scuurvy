@@ -208,11 +208,7 @@ const merchPrinter = (lastArray) => {
 
 const el = document.getElementById("subscribeButton");
 
-const tourInit = () => {
-    buildTourCards(tours)
-    tourEvent();
-    buildTourPhoto();
-};
+
 
 // const tourEvent = () => {
 //     el.addEventListener('click', submitForm);
@@ -264,9 +260,8 @@ const merchSorter = (e) => {
 const videoBuilder = () => {
     let domString = '';
      for (let i = 0; i < homeVideos.length; i++) {
-        domString += `<div class="d-flex flex-wrap justify-content-center card border-dark mb-3">`
-        domString += `<div class="videos">`
-        domString += `<iframe width="560" height="315" src="${homeVideos[i].videoUrl}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+        domString += '<div class="d-flex justify-content-center flex-wrap col-md-6 row row-cols-2">'
+        domString += `<iframe width="560" height="315" class="vidoes" src="${homeVideos[i].videoUrl}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
         domString += ` </div>`
     }
 printToDom('loopVideos',domString);
@@ -318,5 +313,8 @@ const merchInit = () => {
     merchEvent();
 };
 
-
-
+const tourInit = () => {
+    buildTourCards(tourArray)
+    tourEvent();
+    buildTourPhoto();
+};
