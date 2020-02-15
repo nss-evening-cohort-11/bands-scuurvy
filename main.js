@@ -4,7 +4,7 @@ const homeVideos = [
     {videoUrl:"https://youtube.com/embed/dZTwj26wuFY", id: "vid2"},
     {videoUrl:"https://youtube.com/embed/IWN-NnChQRw", id: "vid3"},
     {videoUrl:"https://youtube.com/embed/kxfEPoDoR3A", id: "vid4"}
-]
+];
 
 const tourArray = [ 
     {date: 'Sun, Feb, 23rd', venue:'For Solo', location: 'Mexico Mexico'},
@@ -14,7 +14,7 @@ const tourArray = [
     {date: 'Sun, May, 31st', venue:'Chin Pavilion', location:  'Phoenix, AZ'},
     {date: 'Wed, Jun, 3rd', venue:'Wrigley Field', location: 'Chicago, IL'},
     {date: 'Wed, Jun, 24th', venue:'Fenway Park', location: 'Boston, MA'},
-]
+];
 
 const merchItems = [
     {
@@ -196,7 +196,7 @@ const albumBuilder = (builderArr)=> {
         domString += `</div>`
     };
     printToDom('album-list', domString);
-}
+};
 
 const el = document.getElementById("subscribeButton");
 
@@ -247,9 +247,9 @@ const merchSorter = (e) => {
 const videoBuilder = () => {
     let domString = '';
      for (let i = 0; i < homeVideos.length; i++) {
-        domString += '<div class="d-flex justify-content-center flex-wrap col-md-6 row row-cols-2">'
-        domString += `<iframe width="560" height="315" class="vidoes" src="${homeVideos[i].videoUrl}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
-        domString += ` </div>`
+        domString += '<div class="d-flex justify-content-center flex-wrap rows row-col-4">'
+        domString += `<iframe width="560" height="315" class="videos" src="${homeVideos[i].videoUrl}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+        domString += `</div>`
     }
 printToDom('loopVideos',domString);
 };
@@ -290,7 +290,6 @@ const merchEvent = () => {
 const homeInit = () => {
     videoBuilder(homeVideos);
 }
-const aboutInit = () =>{
 
 const aboutInit =()=>{
     albumBuilder(albumArr);
