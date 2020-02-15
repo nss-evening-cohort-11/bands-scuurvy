@@ -12,7 +12,8 @@
 }
 
 footer {
-    color: white;}
+    color: white;
+}
 
 
 body {
@@ -150,7 +151,7 @@ h1 {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin: 5px;
+    margin: 10px;
     min-height: 400px;
     background-color:#6d6d6d;
     color: white;
@@ -372,9 +373,3 @@ h1 {
     border: 1px black;
     shadow: 2 2;
 }
-
-.card-body {
-    background-color: #6d6d6d;
-}
-
-
