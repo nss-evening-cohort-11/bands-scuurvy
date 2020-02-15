@@ -1,4 +1,5 @@
 const tours = [ 
+
     {date: 'Sun, Feb, 23rd', venue:'For Solo', location: 'Mexico Mexico'},
     {date: 'Sun, Feb, 24th', venue:'For Solo', location:  'Mexico Mexico'},
     {date: 'Thu, Feb, 27th', venue:'Festival Del Mar', location: 'Vina Del Chile'},
@@ -159,37 +160,10 @@ const merchItems = [
     }
 ];
 
-
 const printToDom = (divId, textToPrint) => {
     const selectedDiv = document.getElementById(divId);
     selectedDiv.innerHTML = textToPrint;
 };
-
-const albumBuilder = (builderArr)=> {
-    let domString = "";
-    for (let i = 0; i < builderArr.length; i++){
-        domString += '<div class="col-md-7 col-lg-4 text-center d-flex">';
-        domString +=  '<div>';
-        domString +=    `<h3 class="albumTitle">${builderArr[i].title}</h3>`;
-        domString +=    `<img src="${builderArr[i].imgUrl}" class="aboutImg zoom hover  " alt="Album cover image">`;
-        domString +=     `<div class="btn-group dropup">`
-        domString +=      `<button type="button" class="btn btn-secondary dropdown-toggle ml-4 mr-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Show Track List</button>`;
-        domString +=       `<div class="dropdown-menu">`
-        domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track1}</a>`
-        domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track2}</a>`
-        domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track3}</a>`
-        domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track4}</a>`
-        domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track5}</a>`
-        domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track6}</a>`
-        domString +=        `<a class="dropdown-item">${builderArr[i].trackList.track7}</a>`
-        domString +=        `</div>`;
-        domString +=      `</div>`;
-        domString +=   `</div>`;
-        domString += `</div>`
-    };
-    printToDom('album-list', domString);
-};
-
 const buildTourCards = (tourArray) => {
     let domString = '';
     for(let i = 0; i < tourArray.length; i++) {
@@ -203,7 +177,6 @@ const buildTourCards = (tourArray) => {
     };
     printToDom('tour-dates', domString);
   };
-
 const merchPrinter = (lastArray) => {
     let domString = '';
     for (let i = 0; i < lastArray.length; i++) {
@@ -232,16 +205,25 @@ const merchPrinter = (lastArray) => {
     printToDom('merchCards', domString);
     activatePurchaseButton();
 };
+const albumBuilder = (builderArr)=> {
+    let domString = "";
+    for (let i = 0; i < builderArr.length; i++){
+        domString += '<div class="col-xs-3 col-sm-4 album">';
+        domString +=  '<div class="overlay-item overlay-effect">';
+        domString +=    `<img src=${builderArr[i].imgUrl} alt="" />`;
+        domString +=    `<div class="mask">`;
+        domString +=        `<h3>Track List</h3>`;
+        domString +=        `<p>${builderArr[i].trackList.track1}</br>${builderArr[i].trackList.track2}</br>${builderArr[i].trackList.track3}</br>${builderArr[i].trackList.track4}</br>${builderArr[i].trackList.track5}</br>${builderArr[i].trackList.track6}</br>${builderArr[i].trackList.track7}</p>`;
+        domString +=        `<a href="./merchandise.html" class="btn btn-danger">Purchase Here</a>`;
+        domString +=    `</div>`;
+        domString +=  `</div>`;
+        domString +=    `<h4 class="text-center">${builderArr[i].title}</h4>`;
+        domString += `</div>`
+    };
+    printToDom('album-list', domString);
+}
 
 const el = document.getElementById("subscribeButton");
-
-const tourInit = () => {
-    buildTourCards(tours)
-    tourEvent();
-    buildTourPhoto();
-};
-
-
 
 const buildTourPhoto = () => {
     let domString = '';
@@ -252,8 +234,6 @@ const buildTourPhoto = () => {
     };
     printToDom('tour-photos', domString);
     };
-
-
 
 const merchSorter = (e) => {
     const sortedMerch = [];
@@ -269,8 +249,6 @@ const merchSorter = (e) => {
         merchPrinter(sortedMerch);
     };
 };
-
-
 const activateButton = () =>{ 
     let getButton = document.getElementsByClassName("trackButton");
     for (let i = 0; i < getButton.length; i++) {
@@ -285,7 +263,6 @@ const activatePurchaseButton = () =>{
 };
 
 const purchaseMerch = () => {
-    console.log('click')
     alert("This item has been to your cart!");
 };
 
@@ -305,14 +282,16 @@ const merchEvent = () => {
     document.getElementById('all').addEventListener('click', merchSorter);
 };
 
-const aboutInit = () =>{
+const aboutInit =()=>{
     albumBuilder(albumArr);
 };
 
 const merchInit = () => {
-    merchPrinter(merchItems);    
+    merchPrinter(merchItems);   
     merchEvent();
 };
-
-
-
+const tourInit = () => {
+    buildTourCards(tours)
+    tourEvent();
+    buildTourPhoto();
+};
