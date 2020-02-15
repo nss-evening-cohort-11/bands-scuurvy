@@ -1,9 +1,10 @@
 
 const homeVideos = [
-    {videoUrl:"https://youtube.com/embed/yRZ-UF4do-A", id: "vid1"},
-    {videoUrl:"https://youtube.com/embed/dZTwj26wuFY", id: "vid2"},
-    {videoUrl:"https://youtube.com/embed/IWN-NnChQRw", id: "vid3"},
-    {videoUrl:"https://youtube.com/embed/kxfEPoDoR3A", id: "vid4"}
+    {videoUrl:"https://youtube.com/embed/yRZ-UF4do-A"},
+    {videoUrl:"https://youtube.com/embed/dZTwj26wuFY"},
+    {videoUrl:"https://youtube.com/embed/IWN-NnChQRw"},
+    {videoUrl:"https://youtube.com/embed/kxfEPoDoR3A"},
+    {videoUrl:"https://youtube.com/embed/VZdpK9dpni0"}
 ];
 
 const tourArray = [ 
