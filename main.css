@@ -1,12 +1,18 @@
-/* .merchImages {
+.merchImages {
     max-width: 300px;
     border-radius: 10%;
     text-align: center;
     margin: auto;
     min-height: 400px;
+}
 
+#merchCardContainer {
+    padding-right: -15px;
+}
 
-} */
+footer {
+    color: white;
+}
 
 .block-title {
     display: block; 
@@ -143,6 +149,7 @@ h1 {
     min-height: 400px;
     background-color:#6d6d6d;
     color: white;
+    min-width: 200px;
 }
 
 .tour-picture {

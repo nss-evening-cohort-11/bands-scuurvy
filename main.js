@@ -8,6 +8,21 @@ const tours = [
     {date: 'Wed, Jun, 24th', venue:'Fenway Park', location: 'Boston, MA'},   
 ];
 
+const tourImageArray = [
+    {imgUrl: "https://i.imgur.com/P5tfqfW.png"},
+    {imgUrl: "https://i.imgur.com/2ukHHTx.png"},
+    {imgUrl: "https://i.imgur.com/IzCg99m.png"},
+    {imgUrl: "https://i.imgur.com/mxr4RTQ.png"},
+    {imgUrl: "https://i.imgur.com/SGjuwVh.png"},
+    {imgUrl: "https://i.imgur.com/or86tp6.png"},
+    {imgUrl: "https://i.imgur.com/xcOBNBW.png"},
+    {imgUrl: "https://i.imgur.com/pnnPLox.png"},
+    {imgUrl: "https://i.imgur.com/fSlbZ4H.png"},
+    {imgUrl: "https://i.imgur.com/dQFoCkr.png"},
+    {imgUrl: "https://i.imgur.com/VRfGkU6.png"},
+    {imgUrl: "https://i.imgur.com/kcBxuBB.png"},
+];
+
 const albumArr = [
     {
     title: "Make Em Shower Cry",
@@ -57,72 +72,90 @@ const merchItems = [
     {
         type: 'album',
         title: 'Rubber Duck',
-        price: 5000,
+        price: 89.53,
         imgUrl: 'bandpics/icecreamalbum.png',
-        buttonId: 'a'
+        buttonId: 'a',
+        description: 'All the hits from years past'
     },
     {
         type: 'album',
         title: 'What Day Is It',
-        price: 5000,
+        price: 52.24,
         imgUrl: 'bandpics/girlsalbum.png',
-        buttonId: 'b'
+        buttonId: 'b',
+        description: 'Recorded live in Paris, Kentucky'
     },
     {
         type: 'album',
         title: 'Make Em Shower Cry',
-        price: 5000,
+        price: 48.57,
         imgUrl: 'bandpics/takeit.png',
-        buttonId: 'c'
+        buttonId: 'c',
+        description: 'Multi-platinum, grammy nominated, debut album'
     },    
     {
         type: 'tShirt',
         title: 'Zoe T-Shirt',
-        price: 5000,
+        price: 23.58,
         imgUrl: 'https://i.imgur.com/r9tz26G.png',
-        buttonId: 'd'
+        buttonId: 'd',
+        description: 'Where it all started'
     },
     {
         type: 'tShirt',
         title: 'Luke T-Shirt',
-        price: 5000,
+        price: 8.99,
         imgUrl: 'https://i.imgur.com/EA34ZF7.png',
-        buttonId: 'e'
+        buttonId: 'e',
+        description: 'Sizing runs small'
     },
     {
         type: 'tShirt',
         title: 'Mary T-Shirt',
-        price: 5000,
+        price: 14.63,
         imgUrl: 'https://i.imgur.com/OiAaEap.png',
-        buttonId: 'f'
+        buttonId: 'f',
+        description: 'Deals like this don\'t happen everyday!'
     },
     {
         type: 'tShirt',
         title: 'Greg T-Shirt',
-        price: 5000,
+        price: 45.25,
         imgUrl: 'https://i.imgur.com/0vNM6lA.png',
-        buttonId: 'r'
+        buttonId: 'r',
+        description: 'Fit in with all the cool kids'
     },
     {
         type: 'hat',
         title: 'Zoe Hat',
-        price: 5000,
+        price: 10.99,
         imgUrl: 'https://i.imgur.com/GY6iLC6.jpg',
-        buttonId: '3'
+        buttonId: '3',
+        description: 'On clearance!!'
     },
     {
         type: 'hat',
         title: 'Mary Hat',
-        price: 5000,
+        price: 15.88,
         imgUrl: 'https://i.imgur.com/0pStUHE.png',
-        buttonId: '2'
+        buttonId: '2',
+        description: 'Get em while they last!!'
     },
     {
         type: 'hat',
         title: 'Luke Hat',
-        price: 5000,
+        price: 26.78,
         imgUrl: 'https://i.imgur.com/MhCy87C.png',
-        id: '1'
+        id: '1',
+        description: 'Dead stock'
+    },
+    {
+        type: 'hat',
+        title: 'Greg Hat',
+        price: 5000,
+        imgUrl: 'https://i.imgur.com/KmeQkcu.png',
+        id: '10',
+        description: 'Makes a great gift!'
     }
 ];
 
@@ -174,11 +207,12 @@ const buildTourCards = (tourArray) => {
 const merchPrinter = (lastArray) => {
     let domString = '';
     for (let i = 0; i < lastArray.length; i++) {
-        domString += '<div class="col-md-6 col-lg-4">'
+        domString += '<div class="col-md-6 col-lg-4" id="merchCardContainer">'
         domString += '<div class="individualCards card" style="width: 20rem;">';
         domString +=    `<img src="${lastArray[i].imgUrl}" class="card-img-top rounded merchImages" alt="...">`
         domString +=    '<div class="card-body">'
         domString +=       `<h5 class="card-title d-flex justify-content-center">${lastArray[i].title}</h5>`
+        domString +=    `<p class="card-description d-flex justify-content-center">${lastArray[i].description}</p>`
         domString +=       `<p class="card-price d-flex justify-content-center">$   ${lastArray[i].price}</p>`
         if (lastArray[i].type === 'tShirt' || lastArray[i].type === 'hat') {
             domString += '<div class="dropdown text-center">'
@@ -207,26 +241,7 @@ const tourInit = () => {
     buildTourPhoto();
 };
 
-// const tourEvent = () => {
-//     el.addEventListener('click', submitForm);
 
-// }
-
-
-const tourImageArray = [
-    {imgUrl: "https://i.imgur.com/P5tfqfW.png"},
-    {imgUrl: "https://i.imgur.com/2ukHHTx.png"},
-    {imgUrl: "https://i.imgur.com/IzCg99m.png"},
-    {imgUrl: "https://i.imgur.com/mxr4RTQ.png"},
-    {imgUrl: "https://i.imgur.com/SGjuwVh.png"},
-    {imgUrl: "https://i.imgur.com/or86tp6.png"},
-    {imgUrl: "https://i.imgur.com/xcOBNBW.png"},
-    {imgUrl: "https://i.imgur.com/pnnPLox.png"},
-    {imgUrl: "https://i.imgur.com/fSlbZ4H.png"},
-    {imgUrl: "https://i.imgur.com/dQFoCkr.png"},
-    {imgUrl: "https://i.imgur.com/VRfGkU6.png"},
-    {imgUrl: "https://i.imgur.com/kcBxuBB.png"},
-];
 
 const buildTourPhoto = () => {
     let domString = '';
