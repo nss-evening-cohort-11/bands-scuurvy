@@ -222,18 +222,14 @@ const merchSorter = (e) => {
 };
 const videoBuilder = () => {
     let domString = '';
-    for (let i = 0; i < homeVideos.length; i++) {
-        domString += `<div class="col-md-6 col-lg-4">`
+     for (let i = 0; i < homeVideos.length; i++) {
+        domString += `<div class="d-flex flex-wrap justify-content-center card border-dark mb-3">`
         domString += `<div class="videos">`
-        domString += `<iframe width="560" height="315" src="${videoUrl}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
-        domString += `<button id="nextVideo" type="button" class="btn btn-danger">Next Video </button>`
+        domString += `<iframe width="560" height="315" src="${homeVideos[i].videoUrl}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
         domString += ` </div>`
     }
-printToDom('homeVideos',domString)
-}
-// const homeEvent = () => {
-// document.getElementById('nextVideo').addEventListener('click',)
-// }
+printToDom('loopVideos',domString);
+};
 
 const activateButton = () =>{ 
     let getButton = document.getElementsByClassName("trackButton");
@@ -267,7 +263,9 @@ const merchEvent = () => {
     document.getElementById('hat').addEventListener('click', merchSorter);
     document.getElementById('all').addEventListener('click', merchSorter);
 };
-
+const homeInit = () => {
+    videoBuilder(homeVideos);
+}
 const aboutInit = () =>{
     albumBuilder(albumArr);
 };
@@ -278,6 +276,6 @@ const merchInit = () => {
 };
 
 const tourInit = () => {
-    buildTourCards(tours);
+    buildTourCards(tourArray);
     tourEvent();
 };
